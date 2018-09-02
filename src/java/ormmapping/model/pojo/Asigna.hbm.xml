@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.pojo.Asigna" table="Asigna" schema="taller1" lazy="false">
+		<composite-id>
+			<key-many-to-one name="aula" column="AulaID" class="model.pojo.Aula">
+			</key-many-to-one>
+			<key-many-to-one name="paralelo" column="ParaleloID" class="model.pojo.Paralelo">
+			</key-many-to-one>
+		</composite-id>
+		<property name="horaentrada" column="Horaentrada" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="horasalida" column="Horasalida" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="anno" column="Anno" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="estado" column="Estado" type="boolean" not-null="true" lazy="false"/>
+		<property name="fecha" column="Fecha" type="date" not-null="false" lazy="false"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.pojo.Curso" table="Curso" schema="taller1" lazy="false">
+		<id name="idcurso" column="idcurso" type="integer">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<many-to-one name="ciclos" cascade="lock" column="CicloID" class="model.pojo.Ciclo" not-null="true" lazy="proxy">
+		</many-to-one>
+		<property name="nombre" column="Nombre" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="anno" column="Anno" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="estado" column="Estado" type="boolean" not-null="true" lazy="false"/>
+		<set name="paralelo" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="CursoID" not-null="true"/>
+			<one-to-many class="model.pojo.Paralelo"/>
+		</set>
+		<set name="materias" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="CursoID" not-null="true"/>
+			<one-to-many class="model.pojo.Materia"/>
+		</set>
+	</class>
+</hibernate-mapping>

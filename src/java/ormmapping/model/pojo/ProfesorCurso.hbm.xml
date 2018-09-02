@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.pojo.ProfesorCurso" table="ProfesorCurso" schema="taller1" lazy="false">
+		<id name="ci" column="Ci" type="integer">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="nombre" column="Nombre" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="ap" column="Ap" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="am" column="Am" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="correo" column="Correo" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="telefono" column="Telefono" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="usuario" column="Usuario" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="contrasena" column="Contrasena" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="direccion" column="Direccion" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="imagen" column="Imagen" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="estado" column="Estado" type="boolean" not-null="true" lazy="false"/>
+		<property name="ciclo" column="ciclo" type="integer" not-null="false" lazy="false"/>
+		<property name="unidad" column="Unidad" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="gestion" column="Gestion" type="integer" length="10" not-null="true" lazy="false"/>
+		<set name="designas" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="ProfesorCursoCi" not-null="true"/>
+			<one-to-many class="model.pojo.Designa"/>
+		</set>
+	</class>
+</hibernate-mapping>

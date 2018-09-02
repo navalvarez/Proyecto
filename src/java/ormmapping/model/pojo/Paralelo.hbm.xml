@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.pojo.Paralelo" table="Paralelo" schema="taller1" lazy="false">
+		<id name="idparalelo" column="idparalelo" type="string">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<many-to-one name="cursos" cascade="lock" column="CursoID" class="model.pojo.Curso" not-null="true" lazy="proxy">
+		</many-to-one>
+		<property name="nombre" column="Nombre" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="estado" column="Estado" type="boolean" not-null="true" lazy="false"/>
+		<set name="designas" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="ParaleloID" not-null="true"/>
+			<one-to-many class="model.pojo.Designa"/>
+		</set>
+		<set name="materia" table="Materia_Paralelo" schema="taller1" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Paraleloidparalelo" not-null="true"/>
+			<many-to-many column="MateriaSigla" class="model.pojo.Materia">
+			</many-to-many>
+		</set>
+		<set name="matriculas" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Idparalelo" not-null="true"/>
+			<one-to-many class="model.pojo.Matricula"/>
+		</set>
+		<set name="asignas" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="ParaleloID" not-null="true"/>
+			<one-to-many class="model.pojo.Asigna"/>
+		</set>
+	</class>
+</hibernate-mapping>

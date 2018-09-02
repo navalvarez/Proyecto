@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.pojo.Aula" table="Aula" schema="taller1" lazy="false">
+		<id name="idaula" column="Idaula" type="string">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="nombre" column="Nombre" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="estado" column="Estado" type="boolean" not-null="true" lazy="false"/>
+		<set name="asignas" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="AulaID" not-null="true"/>
+			<one-to-many class="model.pojo.Asigna"/>
+		</set>
+	</class>
+</hibernate-mapping>

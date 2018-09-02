@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.pojo.Notasest" table="Notasest" schema="taller1" lazy="false">
+		<composite-id>
+			<key-many-to-one name="estudiante" column="Estudianteci" class="model.pojo.Estudiante">
+			</key-many-to-one>
+			<key-many-to-one name="materia" column="MateriaSigla" class="model.pojo.Materia">
+			</key-many-to-one>
+		</composite-id>
+		<property name="bimestre1" column="Bimestre1" type="integer" length="10" not-null="true" lazy="false"/>
+		<property name="bimestre2" column="Bimestre2" type="integer" length="10" not-null="true" lazy="false"/>
+		<property name="bimestre3" column="Bimestre3" type="integer" length="10" not-null="true" lazy="false"/>
+		<property name="estado" column="Estado" type="boolean" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

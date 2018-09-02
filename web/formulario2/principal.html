@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="resultados.jsp" method="post">
+        <label>Nombre </label>
+        <input type="text" maxlength="20" name="nombre">
+        <br>
+         <label>Apellido Paterno </label>
+        <input type="text" maxlength="20" name="ap">
+         <br>
+         <label>Apellido Materno </label>
+        <input type="text" maxlength="20" name="am">
+         <br>
+          <label>Edad  </label>
+        <input type="text" maxlength="2" name="edad">
+         <br>
+         <label> Colegio</label>
+         <select name="colegio">
+               <option value="1">Felipe Palazon</option>
+             <option value="1" selected >Belgrano</option>
+             <option value="2"> Liceo Tarija </option>
+             <option value="3"> Santa Ana </option>
+             <option value="4"> La Salle </option>
+             
+         </select>
+         <br>
+         <label> Sexo</label>
+         femenino <input type="radio" name="sexo" value="f" >
+         masculino<input type="radio" name="sexo" value="m">
+         <br>
+         <select name="nacionalidad">
+               <option value="1" selected>Boliviana</option>
+             <option value="1"  >Argentina</option>
+             <option value="2"> Brazilera </option>
+             <option value="3"> otro..</option>
+         </select>
+         <br>
+         <select name="idioma" multiple>
+             <option>Español</option>
+             <option>Ingles</option>
+             <option>Quechua</option>
+             <option>Aymara</option>
+             <option>Frances</option>
+         </select>
+         <br>
+         <label>*Grado de Instrucción</label>
+         <br>
+         <select name="instruccion">
+             <option value="1">Seleccione un valor</option>
+             <option value="2">Español</option>
+             <option value="3">Ingles</option>
+             <option value="4">Quechua</option>
+             <option value="5">Aymara</option>
+             <option value="6">Frances</option>
+         </select>
+         <br>
+         <select name="nivel" multiple>
+             <option value="1"> Asalariado </option>
+             <option value="2"> Independiente</option>
+             
+             
+         </select>
+         <br>
+         <input type="submit" name="Envivar" value="enviar">  <a href="../index.htm">Cancelar</a>
+        </form>
+         
+    </body>
+</html>

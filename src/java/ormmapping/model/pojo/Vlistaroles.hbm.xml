@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.pojo.Vlistaroles" table="Vlistaroles" schema="taller1" lazy="false" mutable="false">
+		<id name="ID" column="ID" type="long" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="usuario" column="usuario" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="contrasena" column="contrasena" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="nombre" column="nombre" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="ap" column="ap" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="am" column="am" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="estado" column="estado" type="boolean" not-null="false" lazy="false"/>
+		<property name="rol" column="rol" type="string" length="255" not-null="false" lazy="false"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.pojo.DesignaEspecialidad" table="DesignaEspecialidad" schema="taller1" lazy="false">
+		<id name="materiaId" column="MateriaID" type="string">
+			<generator class="foreign">
+				<param name="property">materia</param>
+			</generator>
+		</id>
+		<one-to-one name="materia" class="model.pojo.Materia" cascade="all" constrained="true"/>
+		<property name="fechadesignacion" column="Fechadesignacion" type="date" not-null="false" lazy="false"/>
+		<property name="nredocumento" column="Nredocumento" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="estado" column="Estado" type="boolean" not-null="true" lazy="false"/>
+		<property name="gestion" column="Gestion" type="integer" length="10" not-null="true" lazy="false"/>
+		<many-to-one name="profesorEspecialidad" cascade="lock" column="ProfesorEspecialidadCi" class="model.pojo.ProfesorEspecialidad" not-null="true" lazy="false">
+		</many-to-one>
+	</class>
+</hibernate-mapping>
