@@ -13,11 +13,6 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
-import model.pojo.Matricula;
-import model.pojo.MatriculaDAO;
-import model.pojo.EstudianteDAO;
-import model.pojo.Estudiante;
-import model.pojo.Paralelo;
 import org.orm.PersistentException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -34,6 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class AdicionarMatriculaEstudianteParalelo {
  // insertar un estudiante 
     // mostrar el formulario vacio
+/*
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView adicionarmatricularestudianteparalelo(@RequestParam("ci") int ci) throws ParseException
     {   //try {
@@ -155,8 +151,8 @@ public class AdicionarMatriculaEstudianteParalelo {
          }    
             return listadoP;
         }
- 
- 
+ */
+    
 }
 
 

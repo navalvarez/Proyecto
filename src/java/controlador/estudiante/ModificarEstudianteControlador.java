@@ -9,9 +9,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.servlet.http.HttpServletRequest;
-import model.pojo.Estudiante;
-import static model.pojo.EstudianteDAO.getEstudianteByORMID;
 import org.orm.PersistentException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,33 +17,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- *
- * @author richards
- */
 @Controller
 @RequestMapping("modificarEstudiante.htm")
 public class ModificarEstudianteControlador {
-    /**
-	 * 
-	 * @param ci
-	 */
 	@RequestMapping(method=RequestMethod.GET) 
-    public ModelAndView modificarEstudiante(@RequestParam("ci") int ci)
-    {
-        Estudiante es = null;
+ public ModelAndView modificarEstudiante(@RequestParam("ci") int ci)
+ {
+//        Estudiante es = null;
         
              
-        System.out.println("ci:"+ci);
-        try {
+//        System.out.println("ci:"+ci);
+//        try {
             //int ci =Integer.parseInt( request.getParameter("ci"));
-            es = getEstudianteByORMID(ci);
+//            es = getEstudianteByORMID(ci);
             
-        } catch (PersistentException ex) {
-            Logger.getLogger(ModificarEstudianteControlador.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-       
+      
+ /*      
        ModelAndView mav=new ModelAndView();
        mav.setViewName("modificarEstudiante");
         //mav.addObject("estudiante",new estudiante(es.getCi(),es.getRude(),es.getNombre(),es.getAp(),es.getAm(),
@@ -66,4 +52,7 @@ public class ModificarEstudianteControlador {
             
             return listado;
         }
+}*/
+return null;
+}
 }

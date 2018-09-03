@@ -6,16 +6,16 @@
 package controlador.director;
 import controlador.director.*;
 import java.util.logging.Level;
-import model.pojo.Director;
 import java.util.logging.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.orm.PersistentException;
-public class ListaDirectorControlador {
-    @RequestMapping("listaDirectores.htm")
-    public ModelAndView listaDirectores() {
-        ModelAndView mav = new ModelAndView();
+//public class ListaDirectorControlador {
+    //@RequestMapping("listaDirectores.htm")
+    //public ModelAndView listaDirectores() {
+       // ModelAndView mav = new ModelAndView();
        //java.util.List modelpojoestudiantes = null;
+/*
        model.pojo.Director[] modelpojodirectores; 
         try {
               modelpojodirectores = model.pojo.DirectorDAO.listDirectorByQuery("estado=TRUE","am asc");
@@ -32,3 +32,4 @@ public class ListaDirectorControlador {
     }
             
 }
+*/

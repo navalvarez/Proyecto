@@ -10,13 +10,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import model.pojo.Paralelo;
 import org.orm.PersistentException;
 
 /**
  *
  * @author richards
  */
+/*
 public class ListarParaleloAsignaAula {
 @RequestMapping("listarparaleloasignaaula.htm")
 public ModelAndView listarParaleloAsignaAula() {
@@ -36,3 +36,4 @@ public ModelAndView listarParaleloAsignaAula() {
 }
 }
 
+*/

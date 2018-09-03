@@ -5,14 +5,11 @@
  */
 package controlador.director;
 
-import controlador.director.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
-import model.pojo.Director;
-import static model.pojo.DirectorDAO.getDirectorByORMID;
 import org.orm.PersistentException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,37 +18,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- *
- * @author richards
- */
 @Controller
 @RequestMapping("modificarDirector.htm")
-public class ModificarDirectorControlador {
-    /**
-	 * 
-	 * @param ci
-	 */
-	@RequestMapping(method=RequestMethod.GET) 
-    public ModelAndView modificarDirector(@RequestParam("ci") int ci)
+ public class ModificarDirectorControlador {
+/*	@RequestMapping(method=RequestMethod.GET) 
+    public ModelAndView modificarDirector()
     {
         Director di = null;
         
              
         System.out.println("ci:"+ci);
         try {
-            //int ci =Integer.parseInt( request.getParameter("ci"));
+            int ci =Integer.parseInt( request.getParameter("ci"));
             di = getDirectorByORMID(ci);
             
-        } catch (PersistentException ex) {
-            Logger.getLogger(ModificarDirectorControlador.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
-       
+             
        ModelAndView mav=new ModelAndView();
        mav.setViewName("modificarDirector");
-        //mav.addObject("estudiante",new estudiante(es.getCi(),es.getRude(),es.getNombre(),es.getAp(),es.getAm(),
-        //        es.getCorreo(),es.getTelefono(),es.getUsuario(),es.getContrasena(),es.getSuspendido(),es.getDireccion(),es.getImagen()));           
+        mav.addObject("estudiante",new estudiante(es.getCi(),es.getRude(),es.getNombre(),es.getAp(),es.getAm(),
+              es.getCorreo(),es.getTelefono(),es.getUsuario(),es.getContrasena(),es.getSuspendido(),es.getDireccion(),es.getImagen()));           
         mav.addObject("director",di);
         return mav;
        
@@ -65,11 +51,7 @@ public class ModificarDirectorControlador {
             listado.put("true","No suspendido");
             return listado;
         }
-    
-         /**
-	 * 
-	 * @param di
-	 */
+  
 	@RequestMapping(method=RequestMethod.POST)
     public ModelAndView modificarDirector(
             @ModelAttribute("datos") Director di
@@ -93,4 +75,5 @@ public class ModificarDirectorControlador {
         }
         return new ModelAndView("redirect:listaDirectores.htm");
     }
+*/
 }

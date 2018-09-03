@@ -5,8 +5,7 @@ import java.util.regex.Pattern;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import modelo.Persona;
-
+/*
 public class PersonaValidar implements Validator {
     // IMPLEMENTACION DE LOS METODOS
      private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
@@ -46,3 +45,4 @@ public class PersonaValidar implements Validator {
     }
     
 }
+*/

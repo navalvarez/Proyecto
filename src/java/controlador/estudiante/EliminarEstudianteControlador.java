@@ -10,9 +10,6 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
-import model.pojo.Estudiante;
-import model.pojo.EstudianteDAO;
-import static model.pojo.EstudianteDAO.getEstudianteByORMID;
 import org.orm.PersistentException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,26 +18,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- *
- * @author richards
- */
+
 @Controller
 @RequestMapping("eliminarEstudiante.htm")
 public class EliminarEstudianteControlador {
-    /**
-	 * 
-	 * @param ci
-	 */
-	@RequestMapping(method=RequestMethod.GET) 
+    
+    @RequestMapping(method=RequestMethod.GET) 
     public ModelAndView eliminarEstudiante(@RequestParam("ci") int ci)
     {
-        Estudiante es = null;
+     /*   Estudiante es = null;
         
              
         System.out.println("ci:"+ci);
         try {
-            //int ci =Integer.parseInt( request.getParameter("ci"));
+            int ci =Integer.parseInt( request.getParameter("ci"));
             ModelAndView mav=new ModelAndView();
             es = getEstudianteByORMID(ci);
             
@@ -57,17 +48,9 @@ public class EliminarEstudianteControlador {
        System.out.println("am:"+es.getAm());
        mav.addObject("estudiante",es);
        mav.setViewName("eliminarEstudiante");
-        //mav.addObject("estudiante",new estudiante(es.getCi(),es.getRude(),es.getNombre(),es.getAp(),es.getAm(),
-        //        es.getCorreo(),es.getTelefono(),es.getUsuario(),es.getContrasena(),es.getSuspendido(),es.getDireccion(),es.getImagen()));           
         
         return mav;
     }
-    
-    /**
-	 * 
-	 * @param es
-	 */
-	@RequestMapping(method=RequestMethod.POST)
      public ModelAndView eliminarEstudiantefinal(@ModelAttribute("datos") Estudiante es)
     {
         
@@ -80,7 +63,6 @@ public class EliminarEstudianteControlador {
             ModelAndView mav=new ModelAndView();
             es = getEstudianteByORMID(es.getCi());
             EstudianteDAO.delete(es);
-            // DELETE FROM taller1.estudiante WHERE ci = ?
             
             
         } catch (PersistentException ex) {
@@ -90,9 +72,11 @@ public class EliminarEstudianteControlador {
        
        ModelAndView mav=new ModelAndView();
        mav.setViewName("listaEstudiantes");
-        //mav.addObject("estudiante",new estudiante(es.getCi(),es.getRude(),es.getNombre(),es.getAp(),es.getAm(),
-        //        es.getCorreo(),es.getTelefono(),es.getUsuario(),es.getContrasena(),es.getSuspendido(),es.getDireccion(),es.getImagen()));           
       
         return mav;
     } 
+
+       */ 
+        return null;
+}
 }

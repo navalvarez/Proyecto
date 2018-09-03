@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.pojo.Estudiante;
+/* import model.pojo.Estudiante;
 import model.pojo.EstudianteDAO;
 import model.pojo.Paralelo;
 import model.pojo.ParaleloDAO;
@@ -27,7 +27,7 @@ import model.pojo.MatriculaDAO;
 import model.pojo.Notasest;
 import model.pojo.NotasestDAO;
 import org.orm.PersistentException;
-import ormsamples.DeleteTallerv77Data;
+import ormsamples.DeleteTallerv77Data;*/
 
 /**
  *
@@ -35,7 +35,7 @@ import ormsamples.DeleteTallerv77Data;
  */
 public class Principal {
 
-public static Director[] directorLlenarDatos(){
+/*public static Director[] directorLlenarDatos(){
      Director [] director = new Director[3];
       Director director1 = new Director();
         director1.setCi(111);
@@ -163,9 +163,9 @@ public static Curso[] cursoLlenarDatos(){
         paralelo2.setNombre("1ra B");
         paralelo2.setEstado(true);
         
-        
+  */      
         //paralelo[1]= paralelo2;*/
-        
+ /*       
         model.pojo.ParaleloDAO.save(paralelo1);
         model.pojo.ParaleloDAO.save(paralelo2);
                 
@@ -357,4 +357,5 @@ public static Curso[] cursoLlenarDatos(){
 		// TODO - implement Principal.borrar
 		throw new UnsupportedOperationException();
 	}
+*/
 }

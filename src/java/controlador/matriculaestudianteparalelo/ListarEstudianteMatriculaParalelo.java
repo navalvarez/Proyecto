@@ -9,7 +9,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import model.pojo.Estudiante;
 import org.orm.PersistentException;
 
 /**
@@ -19,7 +18,7 @@ import org.orm.PersistentException;
 public class ListarEstudianteMatriculaParalelo {
 @RequestMapping("listarestudiantematriculaparalelo.htm")
 public ModelAndView listarEstudianteMatriculaParalelo() {
-     ModelAndView mov = new ModelAndView();
+/*     ModelAndView mov = new ModelAndView();
     try {
        
         Estudiante[] est = model.pojo.EstudianteDAO.listEstudianteByQuery(null,null);
@@ -30,7 +29,8 @@ public ModelAndView listarEstudianteMatriculaParalelo() {
     } catch (PersistentException ex) {
         Logger.getLogger(ListarEstudianteMatriculaParalelo.class.getName()).log(Level.SEVERE, null, ex);
     }
-    return mov;
+*/
+return null;
 }
 }
 

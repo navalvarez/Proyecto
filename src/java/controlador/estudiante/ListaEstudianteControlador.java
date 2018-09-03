@@ -14,7 +14,7 @@ import org.orm.PersistentException;
 public class ListaEstudianteControlador {
     @RequestMapping("listaEstudiantes.htm")
     public ModelAndView listaEstudiantes() {
-        ModelAndView mav = new ModelAndView();
+    /*    ModelAndView mav = new ModelAndView();
        //java.util.List modelpojoestudiantes = null;
        model.pojo.Estudiante[] modelpojoestudiantes; 
         try {
@@ -30,5 +30,7 @@ public class ListaEstudianteControlador {
         }
         return mav;    
     }
-            
+      */
+    return null;
+}
 }

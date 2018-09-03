@@ -9,8 +9,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.pojo.Director;
-import model.pojo.DirectorDAO;
 import org.orm.PersistentException;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -23,7 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
  *
  * @author richards
  */
-@Controller
+/*@Controller
 @RequestMapping("insertarDirector.htm")
 public class InsertarDirectorControlador {
  // insertar un estudiante 
@@ -36,10 +34,6 @@ public class InsertarDirectorControlador {
        //listadosuspendido();
        return mav;
     }
-    /**
-	 * guardar lo que llene en el formulario
-	 * @param di
-	 */
     @RequestMapping(method=RequestMethod.POST)
     public ModelAndView insertarDirector(
             @ModelAttribute("datos") Director di
@@ -73,3 +67,4 @@ public class InsertarDirectorControlador {
             return listado;
         }
 }
+*/

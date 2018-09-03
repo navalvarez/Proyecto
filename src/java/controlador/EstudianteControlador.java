@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package controlador;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import modelo.Estudiante;
+import proyecto.Universitarios;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
+/*
 @Controller
 @RequestMapping("estudiante.htm")
 public class EstudianteControlador {
@@ -27,11 +28,11 @@ public class EstudianteControlador {
          es.setSexo("H");
          
          
-         /*p.setCi("introdusca ci");
+         p.setCi("introdusca ci");
          p.setNombre("introdusca nombre");
          p.setAp("introdusca apellido paterno");
          p.setAm("introdusca apellido materno");
-         p.setEdad("Introdusca la edad");*/
+         p.setEdad("Introdusca la edad");
          mav.addObject("estudiante",es);
         return mav;
     }
@@ -53,6 +54,7 @@ public class EstudianteControlador {
 	 * 
 	 * @param es
 	 */
+/*
 	@RequestMapping(method=RequestMethod.POST)
     public ModelAndView leerPersona(@ModelAttribute("estudiante") Estudiante es){
         ModelAndView mav=new ModelAndView();
@@ -72,3 +74,4 @@ public class EstudianteControlador {
      }
              
 }
+*/

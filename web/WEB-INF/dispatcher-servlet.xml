@@ -20,7 +20,7 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="persona2.htm">formListarPersonaControlador</prop>
+                <!--<prop key="persona2.htm">formListarPersonaControlador</prop>
                 <prop key="estudiante.htm">formEstudianteControlador</prop>
                 <prop key="listaEstudiantes.htm">formListaEstudianteControlador</prop>
                 <prop key="insertarEstudiante.htm"> formInsertarEstudianteControlador</prop>
@@ -32,6 +32,8 @@
                 <prop key="listarestudiantematriculaparalelo.htm"> formListarEstudianteMatriculaParalelo </prop>
                 <prop key="adicionarestudiantematriculaparalelo.htm">formAdicionarEstudianteMatriculaParalelo </prop>
                 <prop key="listarparaleloasignaaula.htm">formListarParaleloAsignaAula</prop>
+                -->
+                <prop key="usuario.htm">formIngreso</prop>
             </props>
         </property>
     </bean>
@@ -47,7 +49,7 @@
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
-    <bean name="formListarPersonaControlador" class="controlador.PersonaControlador" />
+    <!-- <bean name="formListarPersonaControlador" class="controlador.PersonaControlador" />
     <bean name="formEstudianteControlador" class="controlador.EstudianteControlador"/>
     <bean name="formListaEstudianteControlador" class="controlador.estudiante.ListaEstudianteControlador"/>
     <bean name="formInsertarEstudianteControlador" class="controlador.estudiante.InsertarEstudianteControlador"/>
@@ -59,4 +61,6 @@
     <bean name="formListarEstudianteMatriculaParalelo" class="controlador.matriculaestudianteparalelo.ListarEstudianteMatriculaParalelo" />
     <bean name="formAdicionarEstudianteMatriculaParalelo" class="controlador.matriculaestudianteparalelo.AdicionarMatriculaEstudianteParalelo"/>
     <bean name="formListarParaleloAsignaAula" class="controlador.asignaparaleloaula.ListarParaleloAsignaAula"/>
+    -->
+    <bean name="formIngreso" class="ingreso.IngresoControler"/>
 </beans>

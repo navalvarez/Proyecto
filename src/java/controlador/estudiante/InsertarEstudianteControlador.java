@@ -8,8 +8,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.pojo.Estudiante;
-import model.pojo.EstudianteDAO;
 import org.orm.PersistentException;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -29,16 +27,14 @@ public class InsertarEstudianteControlador {
     // mostrar el formulario vacio
     @RequestMapping(method=RequestMethod.GET)
     public ModelAndView insertarEstudiante()
-    {  ModelAndView mav = new ModelAndView();
+    {  
+       /* 
+       ModelAndView mav = new ModelAndView();
        mav.setViewName("insertarEstudiante");
        mav.addObject("datos", new Estudiante());
        //listadosuspendido();
        return mav;
     }
-    /**
-	 * guardar lo que llene en el formulario
-	 * @param es
-	 */
     @RequestMapping(method=RequestMethod.POST)
     public ModelAndView insertarEstudiante(
             @ModelAttribute("datos") Estudiante es
@@ -71,4 +67,7 @@ public class InsertarEstudianteControlador {
             listado.put("true","No suspendido");
             return listado;
         }
+*/
+        return null;
+}
 }

@@ -5,7 +5,6 @@
  */
 package controlador;
 import javax.servlet.http.HttpServletRequest;
-import modelo.Persona;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
-
+/*
 @Controller
 @RequestMapping("persona2.htm")
 public class PersonaControlador {
@@ -29,11 +28,11 @@ public class PersonaControlador {
          ModelAndView mav = new ModelAndView();
          System.out.println("Esta es una prueba GET");
          Persona p = new Persona();
-         /* p.setCi("introdusca ci");
+          p.setCi("introdusca ci");
          p.setNombre("introdusca nombre");
          p.setAp("introdusca apellido paterno");
          p.setAm("introdusca apellido materno");
-         p.setEdad("Introdusca la edad");*/
+         p.setEdad("Introdusca la edad");
          mav.addObject("persona",p);
         return mav;
     }
@@ -43,6 +42,7 @@ public class PersonaControlador {
 	 * @param result
 	 * @param status
 	 */
+/*
 	@RequestMapping(method=RequestMethod.POST)
     public ModelAndView leerPersona(@ModelAttribute("persona") Persona p
     , BindingResult result
@@ -67,3 +67,4 @@ public class PersonaControlador {
      }
              
 }
+*/
