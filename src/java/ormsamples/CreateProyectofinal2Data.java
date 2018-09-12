@@ -7,6 +7,29 @@ package ormsamples;
 import org.orm.*;
 public class CreateProyectofinal2Data {
 	public void createTestData() throws PersistentException {
+		// Insert sample data
+		PersistentSession session = proyecto.Proyectofinal2PersistentManager.instance().getSession();
+		PersistentTransaction transaction = session.beginTransaction();
+		try {
+			session.doWork(new org.hibernate.jdbc.Work() {
+				public void execute(java.sql.Connection conn) throws java.sql.SQLException {
+					java.sql.Statement statement = conn.createStatement();
+					statement.executeUpdate("INSERT INTO proyecto.usuarios(idusu, nombre, apellido1, apellido2, sexo, f_nac, cedula, telefono, direccion, foto, activo) VALUES (1, 'Carlos', 'Perez', 'Cota', 'M', '24/09/2000', '4143805', '591673467', null, null, null)");
+					statement.close();
+				}
+			});
+			transaction.commit();
+		}
+		catch (Exception e) {
+			try {
+				transaction.rollback();
+			}
+			catch (PersistentException e1) {
+				e.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+		
 		PersistentTransaction t = proyecto.Proyectofinal2PersistentManager.instance().getSession().beginTransaction();
 		try {
 			proyecto.Banco lproyectoBanco = proyecto.BancoDAO.createBanco();
@@ -60,6 +83,9 @@ public class CreateProyectofinal2Data {
 			proyecto.Usuarios lproyectoUsuarios = proyecto.UsuariosDAO.createUsuarios();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : universitarios, docentes, datos, idrol, activo, foto, cedula, f_nac, sexo, apellido1, nombre
 			proyecto.UsuariosDAO.save(lproyectoUsuarios);
+			proyecto.V_usuariorol lproyectoV_usuariorol = proyecto.V_usuariorolDAO.createV_usuariorol();
+			// Initialize the properties of the persistent object here
+			proyecto.V_usuariorolDAO.save(lproyectoV_usuariorol);
 			t.commit();
 		}
 		catch (Exception e) {

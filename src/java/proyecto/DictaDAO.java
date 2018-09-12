@@ -420,15 +420,4 @@ public class DictaDAO {
 		}
 	}
 	
-	public static Dicta loadDictaByCriteria(DictaCriteria dictaCriteria) {
-		Dicta[] dictas = listDictaByCriteria(dictaCriteria);
-		if(dictas == null || dictas.length == 0) {
-			return null;
-		}
-		return dictas[0];
-	}
-	
-	public static Dicta[] listDictaByCriteria(DictaCriteria dictaCriteria) {
-		return dictaCriteria.listDicta();
-	}
 }

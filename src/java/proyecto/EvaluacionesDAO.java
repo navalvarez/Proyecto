@@ -416,15 +416,4 @@ public class EvaluacionesDAO {
 		}
 	}
 	
-	public static Evaluaciones loadEvaluacionesByCriteria(EvaluacionesCriteria evaluacionesCriteria) {
-		Evaluaciones[] evaluacioneses = listEvaluacionesByCriteria(evaluacionesCriteria);
-		if(evaluacioneses == null || evaluacioneses.length == 0) {
-			return null;
-		}
-		return evaluacioneses[0];
-	}
-	
-	public static Evaluaciones[] listEvaluacionesByCriteria(EvaluacionesCriteria evaluacionesCriteria) {
-		return evaluacionesCriteria.listEvaluaciones();
-	}
 }

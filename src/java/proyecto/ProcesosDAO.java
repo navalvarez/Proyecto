@@ -376,15 +376,4 @@ public class ProcesosDAO {
 		}
 	}
 	
-	public static Procesos loadProcesosByCriteria(ProcesosCriteria procesosCriteria) {
-		Procesos[] procesoses = listProcesosByCriteria(procesosCriteria);
-		if(procesoses == null || procesoses.length == 0) {
-			return null;
-		}
-		return procesoses[0];
-	}
-	
-	public static Procesos[] listProcesosByCriteria(ProcesosCriteria procesosCriteria) {
-		return procesosCriteria.listProcesos();
-	}
 }

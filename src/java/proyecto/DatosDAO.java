@@ -396,15 +396,4 @@ public class DatosDAO {
 		}
 	}
 	
-	public static Datos loadDatosByCriteria(DatosCriteria datosCriteria) {
-		Datos[] datoses = listDatosByCriteria(datosCriteria);
-		if(datoses == null || datoses.length == 0) {
-			return null;
-		}
-		return datoses[0];
-	}
-	
-	public static Datos[] listDatosByCriteria(DatosCriteria datosCriteria) {
-		return datosCriteria.listDatos();
-	}
 }

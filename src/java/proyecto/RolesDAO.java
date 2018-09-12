@@ -384,15 +384,4 @@ public class RolesDAO {
 		}
 	}
 	
-	public static Roles loadRolesByCriteria(RolesCriteria rolesCriteria) {
-		Roles[] roleses = listRolesByCriteria(rolesCriteria);
-		if(roleses == null || roleses.length == 0) {
-			return null;
-		}
-		return roleses[0];
-	}
-	
-	public static Roles[] listRolesByCriteria(RolesCriteria rolesCriteria) {
-		return rolesCriteria.listRoles();
-	}
 }

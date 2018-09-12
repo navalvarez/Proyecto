@@ -408,15 +408,4 @@ public class PreguntasDAO {
 		}
 	}
 	
-	public static Preguntas loadPreguntasByCriteria(PreguntasCriteria preguntasCriteria) {
-		Preguntas[] preguntases = listPreguntasByCriteria(preguntasCriteria);
-		if(preguntases == null || preguntases.length == 0) {
-			return null;
-		}
-		return preguntases[0];
-	}
-	
-	public static Preguntas[] listPreguntasByCriteria(PreguntasCriteria preguntasCriteria) {
-		return preguntasCriteria.listPreguntas();
-	}
 }

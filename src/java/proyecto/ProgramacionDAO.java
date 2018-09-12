@@ -392,15 +392,4 @@ public class ProgramacionDAO {
 		}
 	}
 	
-	public static Programacion loadProgramacionByCriteria(ProgramacionCriteria programacionCriteria) {
-		Programacion[] programacions = listProgramacionByCriteria(programacionCriteria);
-		if(programacions == null || programacions.length == 0) {
-			return null;
-		}
-		return programacions[0];
-	}
-	
-	public static Programacion[] listProgramacionByCriteria(ProgramacionCriteria programacionCriteria) {
-		return programacionCriteria.listProgramacion();
-	}
 }

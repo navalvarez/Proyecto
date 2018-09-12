@@ -376,15 +376,4 @@ public class CarrerasDAO {
 		}
 	}
 	
-	public static Carreras loadCarrerasByCriteria(CarrerasCriteria carrerasCriteria) {
-		Carreras[] carrerases = listCarrerasByCriteria(carrerasCriteria);
-		if(carrerases == null || carrerases.length == 0) {
-			return null;
-		}
-		return carrerases[0];
-	}
-	
-	public static Carreras[] listCarrerasByCriteria(CarrerasCriteria carrerasCriteria) {
-		return carrerasCriteria.listCarreras();
-	}
 }

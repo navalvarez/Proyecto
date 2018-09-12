@@ -5,7 +5,6 @@
  */
 package ingreso;
 
-import java.util.Iterator;
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,18 +14,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 import proyecto.V_usuariorol;
-import proyecto.Usuarios;
-import proyecto.UsuariosDAO;
-import proyecto.Roles;
-import proyecto.RolesDAO;
-import proyecto.Menus;
-import proyecto.MenusDAO;
 import org.orm.PersistentException;
+import org.springframework.web.bind.annotation.SessionAttributes;
 @Controller
 @RequestMapping("usuario.htm")
-public class IngresoControler {
+public class IngresoControlerOld {
     private IngresoValidar ingresovalidar;
-    public IngresoControler(){
+    public IngresoControlerOld(){
         this.ingresovalidar = new IngresoValidar();
     }
     @RequestMapping(method=RequestMethod.GET)
@@ -35,9 +29,7 @@ public class IngresoControler {
     {   
         ModelAndView mav =new ModelAndView();
         mav.setViewName("usuario");
-        V_usuariorol p = new V_usuariorol();
-        
-        
+        V_usuariorol  p = new V_usuariorol();
         mav.addObject("V_usuariorol",p);
         
         System.out.println("se cargo el formulario");
@@ -52,8 +44,7 @@ public class IngresoControler {
     ) throws PersistentException {
         System.out.print(rol);
         this.ingresovalidar.validate(rol, result);
-        //System.out.print(rol.getLogin()+"---");
-        //System.out.print(rol.getPassword()+"--");
+        System.out.print("ingreso aqui validar");
        
         List lista = null;
         String condicion = "login = \'"+ rol.getLogin() + "\' AND password=\'"+rol.getPassword()+"\'";
@@ -74,25 +65,6 @@ public class IngresoControler {
         mav.setViewName("usuario");
         String direccion = null;
         if (!result.hasErrors()) {
-          Usuarios u =  (Usuarios)UsuariosDAO.getUsuariosByORMID(roldevolver.getIdusu());
-            Roles roles;
-            for (Iterator iterator = u.idrol.getIterator(); iterator.hasNext();) {
-            roles = (Roles)iterator.next();
-            System.out.print(roles.getIdrol()+" "+roles.getNombre());
-                
-                for (Iterator iterator2 = roles.idmenu.getIterator(); iterator2.hasNext();){
-                    Menus m;
-                    m = (Menus)iterator2.next();
-                    System.out.print(m.getIdmenu()+" "+m.getNombre());
-                }
-            }
-            
-          
-                 
-          
-          
-          
-          
           if (roldevolver.getNombre().equals("Administrador")) {
               direccion = "redirect:vistaEstudiante.htm";
           }

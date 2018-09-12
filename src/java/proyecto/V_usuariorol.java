@@ -52,11 +52,11 @@ public class V_usuariorol implements Serializable {
 		return getId();
 	}
 	
-	private void setIdusu(int value) {
+	public void setIdusu(int value) {
 		setIdusu(new Integer(value));
 	}
 	
-	private void setIdusu(Integer value) {
+	public void setIdusu(Integer value) {
 		this.idusu = value;
 	}
 	
@@ -64,7 +64,7 @@ public class V_usuariorol implements Serializable {
 		return idusu;
 	}
 	
-	private void setUnombre(String value) {
+	public void setUnombre(String value) {
 		this.unombre = value;
 	}
 	
@@ -72,7 +72,7 @@ public class V_usuariorol implements Serializable {
 		return unombre;
 	}
 	
-	private void setApellido1(String value) {
+	public void setApellido1(String value) {
 		this.apellido1 = value;
 	}
 	
@@ -80,7 +80,7 @@ public class V_usuariorol implements Serializable {
 		return apellido1;
 	}
 	
-	private void setApellido2(String value) {
+	public void setApellido2(String value) {
 		this.apellido2 = value;
 	}
 	
@@ -88,7 +88,7 @@ public class V_usuariorol implements Serializable {
 		return apellido2;
 	}
 	
-	private void setNombre(String value) {
+	public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
@@ -96,7 +96,7 @@ public class V_usuariorol implements Serializable {
 		return nombre;
 	}
 	
-	private void setLogin(String value) {
+	public void setLogin(String value) {
 		this.login = value;
 	}
 	
@@ -104,7 +104,7 @@ public class V_usuariorol implements Serializable {
 		return login;
 	}
 	
-	private void setPassword(String value) {
+	public void setPassword(String value) {
 		this.password = value;
 	}
 	
@@ -112,11 +112,11 @@ public class V_usuariorol implements Serializable {
 		return password;
 	}
 	
-	private void setActivo(boolean value) {
+	public void setActivo(boolean value) {
 		setActivo(new Boolean(value));
 	}
 	
-	private void setActivo(Boolean value) {
+	public void setActivo(Boolean value) {
 		this.activo = value;
 	}
 	

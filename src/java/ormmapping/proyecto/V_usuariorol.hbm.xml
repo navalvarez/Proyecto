@@ -5,7 +5,7 @@ License Type: Evaluation
 -->
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="proyecto.V_usuariorol" table="v_usuariorol" schema="proyecto" lazy="false" mutable="false">
+	<class name="proyecto.V_usuariorol" table="v_usuariorol" schema="proyecto" lazy="false">
 		<id name="id" column="id" type="long" unsaved-value="0">
 			<generator class="native">
 			</generator>

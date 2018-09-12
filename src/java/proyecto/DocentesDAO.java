@@ -304,15 +304,4 @@ public class DocentesDAO {
 		}
 	}
 	
-	public static Docentes loadDocentesByCriteria(DocentesCriteria docentesCriteria) {
-		Docentes[] docenteses = listDocentesByCriteria(docentesCriteria);
-		if(docenteses == null || docenteses.length == 0) {
-			return null;
-		}
-		return docenteses[0];
-	}
-	
-	public static Docentes[] listDocentesByCriteria(DocentesCriteria docentesCriteria) {
-		return docentesCriteria.listDocentes();
-	}
 }

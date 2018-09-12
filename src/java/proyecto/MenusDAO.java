@@ -384,15 +384,4 @@ public class MenusDAO {
 		}
 	}
 	
-	public static Menus loadMenusByCriteria(MenusCriteria menusCriteria) {
-		Menus[] menuses = listMenusByCriteria(menusCriteria);
-		if(menuses == null || menuses.length == 0) {
-			return null;
-		}
-		return menuses[0];
-	}
-	
-	public static Menus[] listMenusByCriteria(MenusCriteria menusCriteria) {
-		return menusCriteria.listMenus();
-	}
 }

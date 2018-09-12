@@ -400,15 +400,4 @@ public class UsuariosDAO {
 		}
 	}
 	
-	public static Usuarios loadUsuariosByCriteria(UsuariosCriteria usuariosCriteria) {
-		Usuarios[] usuarioses = listUsuariosByCriteria(usuariosCriteria);
-		if(usuarioses == null || usuarioses.length == 0) {
-			return null;
-		}
-		return usuarioses[0];
-	}
-	
-	public static Usuarios[] listUsuariosByCriteria(UsuariosCriteria usuariosCriteria) {
-		return usuariosCriteria.listUsuarios();
-	}
 }

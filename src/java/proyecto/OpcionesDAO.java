@@ -384,15 +384,4 @@ public class OpcionesDAO {
 		}
 	}
 	
-	public static Opciones loadOpcionesByCriteria(OpcionesCriteria opcionesCriteria) {
-		Opciones[] opcioneses = listOpcionesByCriteria(opcionesCriteria);
-		if(opcioneses == null || opcioneses.length == 0) {
-			return null;
-		}
-		return opcioneses[0];
-	}
-	
-	public static Opciones[] listOpcionesByCriteria(OpcionesCriteria opcionesCriteria) {
-		return opcionesCriteria.listOpciones();
-	}
 }

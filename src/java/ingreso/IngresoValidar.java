@@ -50,12 +50,12 @@ public class IngresoValidar implements Validator {
     public void validate(Object o,Errors errors) {
         
         V_usuariorol ingreso = (V_usuariorol)o;
-        System.out.println("Usuario:"+ingreso.getLogin());
-        System.out.println("Contrasena:"+ingreso.getPassword());
+        System.out.println("Usuario:"+ingreso.getLogin()+"dentro");
+        System.out.println("Contrasena:"+ingreso.getPassword()+"dentro");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "login",
-        "required.login", "El campo Usuario es Obligatorio");
+        "login.required", "El campo Usuario es Obligatorio");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password",
-        "required.password", "El campo Contrasena es Obligatorio");
+        "password.required", "El campo Contrasena es Obligatorio");
         this.validarUsuario(ingreso, errors);
         
     }

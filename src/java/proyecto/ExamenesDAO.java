@@ -392,15 +392,4 @@ public class ExamenesDAO {
 		}
 	}
 	
-	public static Examenes loadExamenesByCriteria(ExamenesCriteria examenesCriteria) {
-		Examenes[] exameneses = listExamenesByCriteria(examenesCriteria);
-		if(exameneses == null || exameneses.length == 0) {
-			return null;
-		}
-		return exameneses[0];
-	}
-	
-	public static Examenes[] listExamenesByCriteria(ExamenesCriteria examenesCriteria) {
-		return examenesCriteria.listExamenes();
-	}
 }

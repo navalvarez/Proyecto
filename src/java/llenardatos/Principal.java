@@ -9,6 +9,8 @@ import java.util.Date;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import proyecto.*;
+import org.orm.*;
 /* import model.pojo.Estudiante;
 import model.pojo.EstudianteDAO;
 import model.pojo.Paralelo;
@@ -33,7 +35,10 @@ import ormsamples.DeleteTallerv77Data;*/
  *
  * @author richards
  */
-public class Principal {
+	/**
+	 * 
+	 * @param args
+	 */
 
 /*public static Director[] directorLlenarDatos(){
      Director [] director = new Director[3];
@@ -358,4 +363,4 @@ public static Curso[] cursoLlenarDatos(){
 		throw new UnsupportedOperationException();
 	}
 */
-}
+

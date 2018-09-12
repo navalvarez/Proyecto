@@ -295,6 +295,32 @@ public class V_usuariorolDAO {
 		}
 	}
 	
+	public static V_usuariorol createV_usuariorol() {
+		return new proyecto.V_usuariorol();
+	}
+	
+	public static boolean save(proyecto.V_usuariorol v_usuariorol) throws PersistentException {
+		try {
+			Proyectofinal2PersistentManager.instance().saveObject(v_usuariorol);
+			return true;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			throw new PersistentException(e);
+		}
+	}
+	
+	public static boolean delete(proyecto.V_usuariorol v_usuariorol) throws PersistentException {
+		try {
+			Proyectofinal2PersistentManager.instance().deleteObject(v_usuariorol);
+			return true;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			throw new PersistentException(e);
+		}
+	}
+	
 	public static boolean refresh(proyecto.V_usuariorol v_usuariorol) throws PersistentException {
 		try {
 			Proyectofinal2PersistentManager.instance().getSession().refresh(v_usuariorol);
@@ -317,15 +343,4 @@ public class V_usuariorolDAO {
 		}
 	}
 	
-	public static V_usuariorol loadV_usuariorolByCriteria(V_usuariorolCriteria v_usuariorolCriteria) {
-		V_usuariorol[] v_usuariorols = listV_usuariorolByCriteria(v_usuariorolCriteria);
-		if(v_usuariorols == null || v_usuariorols.length == 0) {
-			return null;
-		}
-		return v_usuariorols[0];
-	}
-	
-	public static V_usuariorol[] listV_usuariorolByCriteria(V_usuariorolCriteria v_usuariorolCriteria) {
-		return v_usuariorolCriteria.listV_usuariorol();
-	}
 }

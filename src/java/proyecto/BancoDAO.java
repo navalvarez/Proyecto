@@ -400,15 +400,4 @@ public class BancoDAO {
 		}
 	}
 	
-	public static Banco loadBancoByCriteria(BancoCriteria bancoCriteria) {
-		Banco[] bancos = listBancoByCriteria(bancoCriteria);
-		if(bancos == null || bancos.length == 0) {
-			return null;
-		}
-		return bancos[0];
-	}
-	
-	public static Banco[] listBancoByCriteria(BancoCriteria bancoCriteria) {
-		return bancoCriteria.listBanco();
-	}
 }

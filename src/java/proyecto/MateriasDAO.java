@@ -412,15 +412,4 @@ public class MateriasDAO {
 		}
 	}
 	
-	public static Materias loadMateriasByCriteria(MateriasCriteria materiasCriteria) {
-		Materias[] materiases = listMateriasByCriteria(materiasCriteria);
-		if(materiases == null || materiases.length == 0) {
-			return null;
-		}
-		return materiases[0];
-	}
-	
-	public static Materias[] listMateriasByCriteria(MateriasCriteria materiasCriteria) {
-		return materiasCriteria.listMaterias();
-	}
 }

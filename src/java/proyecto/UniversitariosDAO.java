@@ -304,15 +304,4 @@ public class UniversitariosDAO {
 		}
 	}
 	
-	public static Universitarios loadUniversitariosByCriteria(UniversitariosCriteria universitariosCriteria) {
-		Universitarios[] universitarioses = listUniversitariosByCriteria(universitariosCriteria);
-		if(universitarioses == null || universitarioses.length == 0) {
-			return null;
-		}
-		return universitarioses[0];
-	}
-	
-	public static Universitarios[] listUniversitariosByCriteria(UniversitariosCriteria universitariosCriteria) {
-		return universitariosCriteria.listUniversitarios();
-	}
 }
