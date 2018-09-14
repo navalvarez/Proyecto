@@ -79,7 +79,6 @@ public class IngresoControler {
             for (Iterator iterator = u.idrol.getIterator(); iterator.hasNext();) {
             roles = (Roles)iterator.next();
             System.out.print(roles.getIdrol()+" "+roles.getNombre());
-                
                 for (Iterator iterator2 = roles.idmenu.getIterator(); iterator2.hasNext();){
                     Menus m;
                     m = (Menus)iterator2.next();

@@ -34,6 +34,7 @@
                 <prop key="listarparaleloasignaaula.htm">formListarParaleloAsignaAula</prop>
                 -->
                 <prop key="usuario.htm">formIngreso</prop>
+                <prop key="principal.htm">formPrincipal</prop>
             </props>
         </property>
     </bean>
@@ -63,4 +64,5 @@
     <bean name="formListarParaleloAsignaAula" class="controlador.asignaparaleloaula.ListarParaleloAsignaAula"/>
     -->
     <bean name="formIngreso" class="ingreso.IngresoControler"/>
+    <bean name="formPrincipal" class="principal.PrincipalControler"/>
 </beans>
