@@ -34,7 +34,7 @@
                 <prop key="listarparaleloasignaaula.htm">formListarParaleloAsignaAula</prop>
                 -->
                 <prop key="usuario.htm">formIngreso</prop>
-                <prop key="principal.htm">formPrincipal</prop>
+                <prop key="principal_2.htm">formPrincipal</prop>
             </props>
         </property>
     </bean>

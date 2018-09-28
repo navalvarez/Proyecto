@@ -109,11 +109,11 @@ public class Menus implements Serializable {
 		this.ORM_idpro = value;
 	}
 	
-	private java.util.Set getORM_Idpro() {
+	public java.util.Set getORM_Idpro() {
 		return ORM_idpro;
 	}
 	
-	public final proyecto.ProcesosSetCollection idpro = new proyecto.ProcesosSetCollection(this, _ormAdapter, ORMConstants.KEY_MENUS_IDPRO, ORMConstants.KEY_PROCESOS_IDMENU, ORMConstants.KEY_MUL_MANY_TO_MANY);
+	public proyecto.ProcesosSetCollection idpro = new proyecto.ProcesosSetCollection(this, _ormAdapter, ORMConstants.KEY_MENUS_IDPRO, ORMConstants.KEY_PROCESOS_IDMENU, ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getIdmenu());

@@ -5,6 +5,7 @@
  */
 package ingreso;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,8 @@ import proyecto.Roles;
 import proyecto.RolesDAO;
 import proyecto.Menus;
 import proyecto.MenusDAO;
+import proyecto.Procesos;
+import proyecto.ProcesosDAO;
 import org.orm.PersistentException;
 @Controller
 @RequestMapping("usuario.htm")
@@ -60,61 +63,69 @@ public class IngresoControler {
             //lista = model.pojo.VlistarolesDAO.queryVlistaroles(condicion," nombre DESC");
             lista = proyecto.V_usuariorolDAO.queryV_usuariorol(condicion," unombre DESC");
             V_usuariorol roldevolver = null;
-             ModelAndView mav = new ModelAndView();
+            // ModelAndView mav = new ModelAndView();
                      
             try {
-                roldevolver = (V_usuariorol)lista.get(0);
-             
-                
+                roldevolver = (V_usuariorol)lista.get(0);           
             }
             catch (IndexOutOfBoundsException ex){
+                System.out.println("hola");
+            }
               
-                
-        }
-        mav.setViewName("usuario");
+        
+        
         String direccion = null;
-        if (!result.hasErrors()) {
-          Usuarios u =  (Usuarios)UsuariosDAO.getUsuariosByORMID(roldevolver.getIdusu());
-            Roles roles;
-            for (Iterator iterator = u.idrol.getIterator(); iterator.hasNext();) {
-            roles = (Roles)iterator.next();
-            System.out.print(roles.getIdrol()+" "+roles.getNombre());
-                for (Iterator iterator2 = roles.idmenu.getIterator(); iterator2.hasNext();){
-                    Menus m;
+        ModelAndView  mav2 = new ModelAndView("usuario");
+        
+    
+        if (result.hasErrors()) 
+        {
+        mav2.setViewName("usuario");
+        return mav2;
+        }   Menus m = null;
+            Procesos p = null;
+            Usuarios u =  (Usuarios)UsuariosDAO.getUsuariosByORMID(roldevolver.getIdusu());
+            Roles roles=null;
+            List<Menus> smenus = new ArrayList<Menus>();
+            List<Procesos> sprocesos = new ArrayList<Procesos>();
+            
+            // ROL 
+            for (Iterator iterator = u.idrol.getIterator(); iterator.hasNext();){
+               roles = (Roles)iterator.next();
+               
+                // MENU
+               for (Iterator iterator2 = roles.idmenu.getIterator(); iterator2.hasNext();){
+                    
                     m = (Menus)iterator2.next();
-                    System.out.print(m.getIdmenu()+" "+m.getNombre());
-                }
+                    System.out.println ("NOMBRE DEL MENU:"+m.getNombre());
+                    smenus.add(m);
+                        // PROCESOS 
+                        for (Iterator iterator3 = m.idpro.getIterator(); iterator3.hasNext();){              
+                            p = (Procesos)iterator3.next();
+                            System.out.println("nombre del proceso:"+p.getNombre());
+                            sprocesos.add(p);
+                        }
+                        
+               }
+               
+               
             }
             
-          
-                 
-          
-          
-          
-          
-          if (roldevolver.getNombre().equals("Administrador")) {
-              direccion = "redirect:vistaEstudiante.htm";
-          }
-            if (roldevolver.getNombre().equals("Director")) { 
-             direccion = "redirect:vistaDirector.htm";
-          }
-         
-          if (roldevolver.getNombre().equals("PC")) {
-             direccion = "redirect:vistaProfesorCurso.htm";
-          }
             
-          if (roldevolver.getNombre().equals("PE")) {
-          direccion = "redirect:vistaProfesorEspecialidad.htm";
-          }
-        } else {
-           direccion = "redirect:usuario.htm";
+            
+            mav2.setViewName("principal_2");
+            /*mav2.addObject("rol",u.idrol.getIterator());
+            mav2.addObject("menus",roles.i);
+            mav2.addObject("procesos",m.idpro.toArray());*/
+            
+            /*mav2.addObject("menus",smenus);
+            
+            mav2.addObject("procesos",sprocesos);*/
+            mav2.addObject("mismenus",smenus);
+            
+              return mav2;
+              
         }
-      
         
-        return new ModelAndView(direccion);
-    }
-            
-     
     
 }
-       
