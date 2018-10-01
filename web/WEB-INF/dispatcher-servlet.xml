@@ -35,6 +35,8 @@
                 -->
                 <prop key="usuario.htm">formIngreso</prop>
                 <prop key="principal_2.htm">formPrincipal</prop>
+                <prop key="top.htm">formTop</prop>
+                <prop key="bottom.htm">formBottom</prop>
             </props>
         </property>
     </bean>
@@ -65,4 +67,6 @@
     -->
     <bean name="formIngreso" class="ingreso.IngresoControler"/>
     <bean name="formPrincipal" class="principal.PrincipalControler"/>
+    <bean name="formTop" class="principal.TopControler"/>
+    <bean name="formBottom" class="principal.BottomControler"/>
 </beans>
