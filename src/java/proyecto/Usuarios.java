@@ -245,7 +245,7 @@ public class Usuarios implements Serializable {
 		this.ORM_idrol = value;
 	}
 	
-	private java.util.Set getORM_Idrol() {
+	public java.util.Set getORM_Idrol() {
 		return ORM_idrol;
 	}
 	

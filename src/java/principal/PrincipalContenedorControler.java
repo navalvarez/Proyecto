@@ -24,15 +24,15 @@ import proyecto.Menus;
 import proyecto.MenusDAO;
 import org.orm.PersistentException;
 @Controller
-@RequestMapping("principal_2.htm")
-public class PrincipalControler {
+@RequestMapping("principalcontenedor.htm")
+public class PrincipalContenedorControler {
     
     @RequestMapping(method=RequestMethod.GET)
     public ModelAndView principalControler() 
             
     {   
         ModelAndView mav =new ModelAndView();
-        mav.setViewName("principal_2");
+        mav.setViewName("principalcontenedor");
         return mav;
     }
     

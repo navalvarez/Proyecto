@@ -1,10 +1,12 @@
 <! DOCTYPE html>
 <html>
+    esta es la primera pagina
     <frameset rows="16%,16%,*">
         <frame src="top.htm" name="top">
         <frame src="bottom.htm" name="bottom">
         <frame src="principal_2.htm" name="principal">    
-    </frameset>    
+    <frameset/>
+       
         <p size="25"> Mi nombre es Richard Sivila </p>
         <a href="formulario2/principal.html"> Formulario 2 </a>
         <br>

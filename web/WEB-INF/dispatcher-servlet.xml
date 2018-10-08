@@ -37,6 +37,8 @@
                 <prop key="principal_2.htm">formPrincipal</prop>
                 <prop key="top.htm">formTop</prop>
                 <prop key="bottom.htm">formBottom</prop>
+                <prop key="principalcontenedor.htm">formPrincipalContenedor</prop>
+                <prop key="uanadir.htm">formUanadir</prop>
             </props>
         </property>
     </bean>
@@ -69,4 +71,6 @@
     <bean name="formPrincipal" class="principal.PrincipalControler"/>
     <bean name="formTop" class="principal.TopControler"/>
     <bean name="formBottom" class="principal.BottomControler"/>
+    <bean name="formPrincipalContenedor" class="principal.PrincipalContenedorControler"/>
+    <bean name="formUanadir" class="controlador.usuario.UanadirControler"/>
 </beans>

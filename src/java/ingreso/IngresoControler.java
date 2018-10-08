@@ -7,7 +7,9 @@ package ingreso;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -25,10 +27,16 @@ import proyecto.MenusDAO;
 import proyecto.Procesos;
 import proyecto.ProcesosDAO;
 import org.orm.PersistentException;
+import org.springframework.web.bind.annotation.SessionAttributes;
 @Controller
+@SessionAttributes({"mismenus","miusuario"})
 @RequestMapping("usuario.htm")
 public class IngresoControler {
     private IngresoValidar ingresovalidar;
+    private Usuarios pusuario= new Usuarios();
+
+
+    
     public IngresoControler(){
         this.ingresovalidar = new IngresoValidar();
     }
@@ -48,6 +56,7 @@ public class IngresoControler {
     }
     
     @RequestMapping(method=RequestMethod.POST)
+    
     public ModelAndView usuarioPost(
             @ModelAttribute("V_usuariorol") V_usuariorol rol,
             BindingResult result,
@@ -85,6 +94,7 @@ public class IngresoControler {
         }   Menus m = null;
             Procesos p = null;
             Usuarios u =  (Usuarios)UsuariosDAO.getUsuariosByORMID(roldevolver.getIdusu());
+            this.pusuario=u;
             Roles roles=null;
             List<Menus> smenus = new ArrayList<Menus>();
             List<Procesos> sprocesos = new ArrayList<Procesos>();
@@ -92,7 +102,6 @@ public class IngresoControler {
             // ROL 
             for (Iterator iterator = u.idrol.getIterator(); iterator.hasNext();){
                roles = (Roles)iterator.next();
-               
                 // MENU
                for (Iterator iterator2 = roles.idmenu.getIterator(); iterator2.hasNext();){
                     
@@ -113,7 +122,7 @@ public class IngresoControler {
             
             
             
-            mav2.setViewName("principal_2");
+            mav2.setViewName("principalcontenedor");
             /*mav2.addObject("rol",u.idrol.getIterator());
             mav2.addObject("menus",roles.i);
             mav2.addObject("procesos",m.idpro.toArray());*/
@@ -121,11 +130,12 @@ public class IngresoControler {
             /*mav2.addObject("menus",smenus);
             
             mav2.addObject("procesos",sprocesos);*/
-            mav2.addObject("mismenus",smenus);
             
+            mav2.addObject("miusuario",pusuario);
+            mav2.addObject("mismenus",smenus);
               return mav2;
               
         }
-        
+       
     
 }
