@@ -23,12 +23,28 @@ import proyecto.RolesDAO;
 import proyecto.Menus;
 import proyecto.MenusDAO;
 import org.orm.PersistentException;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 @Controller
 @RequestMapping("principal_2.htm")
+// Que parametros 
+// login password idrol
+@SessionAttributes({"mismenus","miusuario","rolseleccionado"})
+
 public class PrincipalControler {
     
+    @RequestMapping(method=RequestMethod.POST)
+    public ModelAndView principalControlerPost(@RequestParam("idusu") String idusu ) 
+            
+    {   
+        System.out.println("valor de idusu"+idusu);
+        ModelAndView mav =new ModelAndView();
+        mav.setViewName("principal_2");
+        return mav;
+    }
+    
     @RequestMapping(method=RequestMethod.GET)
-    public ModelAndView principalControler() 
+    public ModelAndView principalControlerGet() 
             
     {   
         ModelAndView mav =new ModelAndView();

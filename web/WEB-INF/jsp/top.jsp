@@ -11,6 +11,7 @@
     function myFunc() {
         var selectBox = document.getElementById("idusu");
         var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        document.getElementById("fmiusuario").action="principal_2.htm"
         
         alert(selectedValue);
         document.getElementById("fmiusuario").submit();

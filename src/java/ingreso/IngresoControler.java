@@ -29,7 +29,7 @@ import proyecto.ProcesosDAO;
 import org.orm.PersistentException;
 import org.springframework.web.bind.annotation.SessionAttributes;
 @Controller
-@SessionAttributes({"mismenus","miusuario"})
+@SessionAttributes({"mismenus","miusuario","rolseleccionado"})
 @RequestMapping("usuario.htm")
 public class IngresoControler {
     private IngresoValidar ingresovalidar;
@@ -100,8 +100,11 @@ public class IngresoControler {
             List<Procesos> sprocesos = new ArrayList<Procesos>();
             
             // ROL 
-            for (Iterator iterator = u.idrol.getIterator(); iterator.hasNext();){
-               roles = (Roles)iterator.next();
+            //for (Iterator iterator = u.idrol.getIterator(); iterator.hasNext();){
+            
+            roles = (Roles)u.getORM_Idrol().iterator().next();
+               
+               
                 // MENU
                for (Iterator iterator2 = roles.idmenu.getIterator(); iterator2.hasNext();){
                     
@@ -118,7 +121,7 @@ public class IngresoControler {
                }
                
                
-            }
+            //}
             
             
             
