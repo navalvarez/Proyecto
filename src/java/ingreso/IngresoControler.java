@@ -30,7 +30,7 @@ import org.orm.PersistentException;
 import org.springframework.web.bind.annotation.SessionAttributes;
 @Controller
 @SessionAttributes({"mismenus","miusuario","rolseleccionado"})
-@RequestMapping("usuario.htm")
+@RequestMapping("/usuario.htm")
 public class IngresoControler {
     private IngresoValidar ingresovalidar;
     private Usuarios pusuario= new Usuarios();
@@ -94,6 +94,7 @@ public class IngresoControler {
         }   Menus m = null;
             Procesos p = null;
             Usuarios u =  (Usuarios)UsuariosDAO.getUsuariosByORMID(roldevolver.getIdusu());
+            
             this.pusuario=u;
             Roles roles=null;
             List<Menus> smenus = new ArrayList<Menus>();

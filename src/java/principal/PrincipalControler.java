@@ -6,39 +6,62 @@
 package principal;
 
 import ingreso.*;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.support.SessionStatus;
-import proyecto.V_usuariorol;
 import proyecto.Usuarios;
 import proyecto.UsuariosDAO;
 import proyecto.Roles;
-import proyecto.RolesDAO;
 import proyecto.Menus;
-import proyecto.MenusDAO;
 import org.orm.PersistentException;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 @Controller
-@RequestMapping("principal_2.htm")
+@RequestMapping("principal_2")
 // Que parametros 
 // login password idrol
 @SessionAttributes({"mismenus","miusuario","rolseleccionado"})
 
 public class PrincipalControler {
-    
+   
     @RequestMapping(method=RequestMethod.POST)
-    public ModelAndView principalControlerPost(@RequestParam("idusu") String idusu ) 
+    public ModelAndView principalControlerPost(@RequestParam("idusu") int r,@ModelAttribute("miusuario") Usuarios usuario,@RequestParam("attr") String attr, Model model ) 
             
     {   
-        System.out.println("valor de idusu"+idusu);
+        System.out.println("llego el mensaje:"+attr);
+        model.addAttribute("attr", attr);
+        System.out.println("usuario logeado:"+usuario.getIdusu());
+        System.out.println("rol seleccionado:"+r);
+        Usuarios usu = null;
+        try {
+            usu = (Usuarios)UsuariosDAO.getUsuariosByORMID(usuario.getIdusu());
+        } catch (PersistentException ex) {
+            Logger.getLogger(TopControler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        List<Menus> smenus = new ArrayList<Menus>();
+        Menus m = null;
+        for (Iterator iterator = usu.idrol.getIterator(); iterator.hasNext();){     
+            Roles roles = (Roles)usu.getORM_Idrol().iterator().next(); 
+            if (roles.getIdrol()==r){
+                // MENU
+               for (Iterator iterator2 = roles.idmenu.getIterator(); iterator2.hasNext();){
+                    
+                    m = (Menus)iterator2.next();
+                    System.out.println ("NOMBRE DEL MENU:"+m.getNombre());
+                    smenus.add(m); 
+               }
+            }
+        }
         ModelAndView mav =new ModelAndView();
+        mav.addObject("mismenus",smenus);       
         mav.setViewName("principal_2");
         return mav;
     }
@@ -47,6 +70,7 @@ public class PrincipalControler {
     public ModelAndView principalControlerGet() 
             
     {   
+        System.out.println("Llego metodo GET");
         ModelAndView mav =new ModelAndView();
         mav.setViewName("principal_2");
         return mav;

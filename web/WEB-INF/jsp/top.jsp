@@ -11,7 +11,8 @@
     function myFunc() {
         var selectBox = document.getElementById("idusu");
         var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        document.getElementById("fmiusuario").action="principal_2.htm"
+        document.getElementById("fmiusuario").action="${pageContext.request.contextPath}/top.htm"
+        document.getElementById("fmiusuario").method = "post";
         
         alert(selectedValue);
         document.getElementById("fmiusuario").submit();
@@ -21,7 +22,7 @@
         
         <table><tr><td> sfds</td> <td>${fmiusuario.getNombre()}&nbsp;${fmiusuario.getApellido1()}&nbsp;${fmiusuario.getApellido2()}</td> <td> 
             
-            <form:form method="POST" id="fmiusuario" commandName="fmiusuario" >
+            <form:form method="POST" id="fmiusuario"  name="fmiusuario" commandName="fmiusuario" >
                 <form:select id="idusu" path="idusu"  onchange="myFunc()"> 
                      <c:forEach  var="dato2" items="${misusuarios}" >                      
                          <form:option value="${dato2.key}" label="${dato2.value}" />

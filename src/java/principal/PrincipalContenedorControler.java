@@ -7,7 +7,9 @@ package principal;
 
 import ingreso.*;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -23,17 +25,25 @@ import proyecto.RolesDAO;
 import proyecto.Menus;
 import proyecto.MenusDAO;
 import org.orm.PersistentException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+
+@SessionAttributes(value={"miusuario","seleccionadorol","rolseleccionado","mismenus"})
 @Controller
-@RequestMapping("principalcontenedor.htm")
-public class PrincipalContenedorControler {
+@RequestMapping(value = "/")
+public class PrincipalContenedorControler  {
     
-    @RequestMapping(method=RequestMethod.GET)
-    public ModelAndView principalControler() 
+    @RequestMapping(value="/principalcontenedor")
+    public String principalControler() 
             
     {   
-        ModelAndView mav =new ModelAndView();
-        mav.setViewName("principalcontenedor");
-        return mav;
+        
+        System.out.println("ingreso principal contenedor");
+        return "principalcontenedor";
     }
-    
+        
 }

@@ -5,16 +5,20 @@
  */
 package controlador.usuario;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+@Controller 
+@RequestMapping("uanadir.htm")
 public class UanadirControler {
 
-	@RequestMapping("uanadir.htm")
+	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView listaUusuario() {
             ModelAndView mav = new ModelAndView();
-            mav.addObject(this);
             mav.setViewName("uanadir");
+            System.out.println("ingreso a añadir");
             return mav ;
 
 	}

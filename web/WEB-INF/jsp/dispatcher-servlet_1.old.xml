@@ -5,18 +5,13 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:context="http://www.springframework.org/schema/context"
-       
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-    <!-- Scan the JavaConfig -->
-    <!--<context:component-scan base-package="config"></context:component-scan>-->
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     <bean class = "org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
-    
-    
+
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
@@ -41,15 +36,14 @@
                 -->
                 <prop key="usuario.htm">formIngreso</prop>
                 <prop key="principal_2.htm">formPrincipal</prop>
-                <prop key="top.htm">formTop</prop>
+                <prop key="/frame/top.htm">formPrincipalContenedor</prop>
                 <prop key="bottom.htm">formBottom</prop>
-                <prop key="principalcontenedor.htm">formPrincipalContenedor</prop>
+                <prop key="/frame/principalcontenedor.htm">formPrincipalContenedor</prop>
                 <prop key="uanadir.htm">formUanadir</prop>
-                
             </props>
         </property>
     </bean>
-    
+
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/jsp/"
@@ -78,9 +72,8 @@
     
     <bean name="formIngreso" class="ingreso.IngresoControler"/>
     <bean name="formPrincipal" class="principal.PrincipalControler"/>
-    <bean name="formTop" class="principal.TopControler"/>
+    <bean name="formTop" class="principal.PrincipalContenedorControler"/>
     <bean name="formBottom" class="principal.BottomControler"/>
-    <!--<bean name="formPrincipalContenedor" class="principal.PrincipalContenedorControler"/>-->
     <bean name="formPrincipalContenedor" class="principal.PrincipalContenedorControler"/>
     <bean name="formUanadir" class="controlador.usuario.UanadirControler"/>
 </beans>
