@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+}
+#section{
+    width: 100%;
+    height: 50px;
+}
+#content-section{
+    width: 100%;
+    height: 50px;
+    background: rgb(22,103,223);
+}
+#lbl-section{
+    font-size: 18px;
+}

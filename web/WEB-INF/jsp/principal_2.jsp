@@ -24,7 +24,7 @@ no actualiza
                  <ul>
                  <c:forEach  var="dato2" items="${misp.getORM_Idpro()}"  varStatus="status2" >
                         
-                        <li><a href="${dato2.getEnlace()}" onClick="myFunc()"><c:out value="${dato2.getNombre()}"></c:out></a></li>
+                     <li><a href="${dato2.getEnlace()}" ><c:out value="${dato2.getNombre()}"></c:out></a></li>
                      </c:forEach>
                 
                 </ul> 

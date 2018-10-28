@@ -33,11 +33,10 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 public class PrincipalControler {
    
     @RequestMapping(method=RequestMethod.POST)
-    public ModelAndView principalControlerPost(@RequestParam("idusu") int r,@ModelAttribute("miusuario") Usuarios usuario,@RequestParam("attr") String attr, Model model ) 
+    public ModelAndView principalControlerPost(@RequestParam("idusu") int r,@ModelAttribute("miusuario") Usuarios usuario ) 
             
     {   
-        System.out.println("llego el mensaje:"+attr);
-        model.addAttribute("attr", attr);
+        
         System.out.println("usuario logeado:"+usuario.getIdusu());
         System.out.println("rol seleccionado:"+r);
         Usuarios usu = null;
@@ -66,10 +65,18 @@ public class PrincipalControler {
         return mav;
     }
     
+    /**
+     *
+     * @param r
+     * @param usuario
+     * @return
+     */
     @RequestMapping(method=RequestMethod.GET)
-    public ModelAndView principalControlerGet() 
+    public ModelAndView principalControlerGet(@ModelAttribute("miusuario") Usuarios usuario) 
             
     {   
+        
+        
         System.out.println("Llego metodo GET");
         ModelAndView mav =new ModelAndView();
         mav.setViewName("principal_2");

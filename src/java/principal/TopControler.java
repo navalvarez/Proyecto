@@ -4,18 +4,11 @@
  * and open the template in the editor.
  */
 package principal;
-
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.orm.PersistentException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,17 +33,16 @@ public class TopControler {
     
     @RequestMapping(value="/top.htm",method=RequestMethod.POST)
     
-    public ModelAndView topControlerPost(@ModelAttribute("miusuario") Usuarios usuario, Model model,@RequestParam("idusu") int idusu,RedirectAttributes a)            
+    public ModelAndView topControlerPost(@ModelAttribute("miusuario") Usuarios usuario, Model model,@RequestParam("idusu") int idusu)            
     {   
         System.out.println("Ingreso Aqui topcontroler");
         System.out.println("Valor de idrol:"+idusu);
         System.out.println("Valor de usuario"+usuario.getIdusu());
         model.addAttribute("fmiusuario",usuario);
-        //mav.addObject("rolseleccionado",u);
-        a.addAttribute("attr", "attrVal");
-        a.addFlashAttribute("flashAttr", "flashAttrVal");
-        ModelAndView mav = new ModelAndView("sendRedirect:/principal_2");
         
+        //mav.addObject("rolseleccionado",u);
+        ModelAndView mav = new ModelAndView("top");
+        mav.addObject("seleccionado", idusu);
         //mav.setViewName("top");
         return mav;
     }
