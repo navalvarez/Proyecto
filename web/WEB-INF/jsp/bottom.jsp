@@ -7,11 +7,19 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Botton</h1>
-    </body>
+	<head>
+		<title>Principal</title>
+	</head>
+	<body>
+		<table width="200%" border="1" >
+			<tr bgcolor="green">
+				<th>seccion 1</th>
+			</tr>
+			<tr valign="top" >
+				<td>
+					seccion 2
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>

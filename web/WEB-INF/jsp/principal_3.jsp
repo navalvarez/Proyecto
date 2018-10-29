@@ -14,6 +14,9 @@
    }
     </script>
     <body>
+no actualiza        
+<nav id="menu">
+    <ul>
         <br>
         
         <c:forEach  var="misp" items="${mismenus}"  varStatus="status" >
@@ -21,7 +24,7 @@
                  <ul>
                  <c:forEach  var="dato2" items="${misp.getORM_Idpro()}"  varStatus="status2" >
                         
-                     <li><a href="${dato2.getEnlace()}" target="bottom" ><c:out value="${dato2.getNombre()}"></c:out></a></li>
+                     <li><a href="${dato2.getEnlace()}" ><c:out value="${dato2.getNombre()}"></c:out></a></li>
                      </c:forEach>
                 
                 </ul> 
@@ -30,3 +33,13 @@
              
              </li>
          </c:forEach>
+        
+            
+    </ul>            
+</nav>
+        
+    </body>
+</html>
+
+
+        
