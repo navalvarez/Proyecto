@@ -20,7 +20,7 @@
     var form = document.createElement('form');
     form.setAttribute('method', method);
     form.setAttribute('action', path);
-    form.setAttribute('target', 'bottom');
+    form.setAttribute('target', 'principal');
 
     //Move the submit function to another variable
     //so that it doesn't get overwritten.

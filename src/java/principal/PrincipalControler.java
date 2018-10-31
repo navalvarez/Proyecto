@@ -48,7 +48,8 @@ public class PrincipalControler {
         List<Menus> smenus = new ArrayList<Menus>();
         Menus m = null;
         for (Iterator iterator = usu.idrol.getIterator(); iterator.hasNext();){     
-            Roles roles = (Roles)usu.getORM_Idrol().iterator().next(); 
+            Roles roles = (Roles)iterator.next(); 
+             System.out.println ("ingreso rol");
             if (roles.getIdrol()==r){
                 // MENU
                for (Iterator iterator2 = roles.idmenu.getIterator(); iterator2.hasNext();){

@@ -43,7 +43,7 @@ public class TopControler {
         //mav.addObject("rolseleccionado",u);
         ModelAndView mav = new ModelAndView("top");
         mav.addObject("seleccionado", idusu);
-        //mav.setViewName("top");
+        mav.setViewName("top");
         return mav;
     }
     @RequestMapping(value="/top.htm",method=RequestMethod.GET)

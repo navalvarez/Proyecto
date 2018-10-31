@@ -19,8 +19,8 @@
 							<td width="200" background="images/bg2.jpg">
 								<iframe id="principal" name="principal" src="${pageContext.request.contextPath}/principal_2.htm" witdh="30%" height="700"></iframe>
 							</td>
-							<td>
-                                                            <iframe id="bottom" name="bottom" src="${pageContext.request.contextPath}/bottom.htm" height="700" witdh="70%"></iframe>
+							<td >
+                                                            <iframe id="bottom" name="bottom" src="${pageContext.request.contextPath}/bottom.htm" height="700" width="850"></iframe>
 							</td>
 						</tr>
 					</table>
