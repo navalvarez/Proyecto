@@ -39,6 +39,8 @@
                 <prop key="adicionarestudiantematriculaparalelo.htm">formAdicionarEstudianteMatriculaParalelo </prop>
                 <prop key="listarparaleloasignaaula.htm">formListarParaleloAsignaAula</prop>
                 -->
+                <!-- menus de usuario -->
+                
                 <prop key="usuario.htm">formIngreso</prop>
                 <prop key="principal_2.htm">formPrincipal</prop>
                 <prop key="top.htm">formTop</prop>
@@ -83,4 +85,4 @@
     <!--<bean name="formPrincipalContenedor" class="principal.PrincipalContenedorControler"/>-->
     <bean name="formPrincipalContenedor" class="principal.PrincipalContenedorControler"/>
     <bean name="formUanadir" class="controlador.usuario.UanadirControler"/>
-</beans>
+    </beans>

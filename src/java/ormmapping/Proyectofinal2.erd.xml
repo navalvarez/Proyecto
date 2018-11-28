@@ -1255,6 +1255,17 @@
     proyecto.usurol ur,
     proyecto.roles r
   WHERE ((u.idusu = ur.idusu) AND (ur.idrol = r.idrol));" schema="proyecto" Materialized="false"/>
+  <View name="examen" CreateStmt="create view examen as  SELECT u.idusu,
+    u.nombre,
+    u.apellido1,
+    u.apellido2,
+    ev.nota
+   FROM proyecto.usuarios u,
+    proyecto.datos d,
+    proyecto.universitarios un,
+    proyecto.programacion p,
+    proyecto.evaluaciones ev
+  WHERE (((((u.idusu = d.idusu) AND (u.idusu = un.idusu)) AND (un.idusu = p.idusu)) AND (p.idprog = ev.idprog)) AND (ev.nota &gt;= 51));" schema="proyecto" Materialized="false"/>
   <ForeignKey name="fkbanco423148">
     <ReferenceTable>banco</ReferenceTable>
     <ReferenceSchema>proyecto</ReferenceSchema>
