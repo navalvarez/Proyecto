@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+<window id="win" title="String in java" width="100%" border="notmal"
+<zscript language="java">
+    CKeditor ck = new CKeditor();
+    ck.setValue("Hola Mundo");
+    ck.setParent(win);
+    ck.addEventListener(Events.
+</zscript>
+
+</zk>
