@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-
     <welcome-file-list>
         <welcome-file>usuario.jsp</welcome-file>
         <welcome-file>usuario.htm</welcome-file>
@@ -29,73 +28,4 @@
     <welcome-file-list>
         <welcome-file>redirect.jsp</welcome-file>
     </welcome-file-list>
-   
-   
-   <!-- ZK CONFIG -->
-	<listener>
-		<listener-class>org.zkoss.zk.ui.http.HttpSessionListener</listener-class>
-	</listener>
-	<servlet>
-		<servlet-name>zkLoader</servlet-name>
-		<servlet-class>org.zkoss.zk.ui.http.DHtmlLayoutServlet</servlet-class>
-		<!--
-			Must. Specifies URI of the update engine (DHtmlUpdateServlet). It
-			must be the same as <url-pattern> for the update engine.
-		-->
-		<init-param>
-			<param-name>update-uri</param-name>
-			<param-value>/zkau</param-value>
-		</init-param>
-		<!--
-			Optional. Specifies whether to compress the output of the ZK loader.
-			It speeds up the transmission over slow Internet. However, if you
-			configure a filter to post-processing the output, you might have to
-			disable it. Default: true <init-param>
-			<param-name>compress</param-name> <param-value>true</param-value>
-			</init-param>
-		-->
-		<!--
-			Optional. Specifies the default log level: OFF, ERROR, WARNING, INFO,
-			DEBUG and FINER. If not specified, the system default is used.
-			<init-param> <param-name>log-level</param-name>
-			<param-value>OFF</param-value> </init-param>
-		-->
-		<load-on-startup>1</load-on-startup><!-- Must -->
-	</servlet>
-	<servlet>
-		<servlet-name>auEngine</servlet-name>
-		<servlet-class>org.zkoss.zk.au.http.DHtmlUpdateServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>zkLoader</servlet-name>
-		<url-pattern>*.zul</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>zkLoader</servlet-name>
-		<url-pattern>*.zhtml</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>zkLoader</servlet-name>
-		<url-pattern>*.svg</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>zkLoader</servlet-name>
-		<url-pattern>*.xml2html</url-pattern>
-	</servlet-mapping>
-    
-	<!-- Optional. Uncomment it if you want to use richlets.
-	-->
-	<servlet-mapping>
-		<servlet-name>zkLoader</servlet-name>
-		<url-pattern>/zk/*</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>auEngine</servlet-name>
-		<url-pattern>/zkau/*</url-pattern>
-	</servlet-mapping>
-        
-
-<!-- END ZK CONFIG  -->
-
 </web-app>
