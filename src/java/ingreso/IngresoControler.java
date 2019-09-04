@@ -29,6 +29,9 @@ import proyecto.ProcesosDAO;
 import org.orm.PersistentException;
 import org.springframework.web.bind.annotation.SessionAttributes;
 @Controller
+// las variables sesionadas, son aquellas que yo quiero 
+// que sus valores se preserven, al pasar de un controlador
+// a otro
 @SessionAttributes({"mismenus","miusuario","rolseleccionado"})
 @RequestMapping("/usuario.htm")
 public class IngresoControler {
