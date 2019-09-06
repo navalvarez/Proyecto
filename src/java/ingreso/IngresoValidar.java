@@ -35,8 +35,8 @@ public class IngresoValidar implements Validator {
                 
             }
             catch (IndexOutOfBoundsException ex){
-                 errors.rejectValue("login", "error.V_usuariorol.login", "Usuario no se encuentra registrado"); 
-                errors.rejectValue("password", "error.V_usuariorol.password", "Contraseña no se encuentra registrado"); 
+                 errors.rejectValue("login", "error.V_usuariorol.login", "Usuario incorrecto"); 
+                errors.rejectValue("password", "error.V_usuariorol.password", "Contraseña incorrecta"); 
             
                 
         }
@@ -53,9 +53,9 @@ public class IngresoValidar implements Validator {
         System.out.println("Usuario:"+ingreso.getLogin()+"dentro");
         System.out.println("Contrasena:"+ingreso.getPassword()+"dentro");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "login",
-        "login.required", "El campo Usuario es Obligatorio");
+        "login.required", "Primer Mensaje Login");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password",
-        "password.required", "El campo Contrasena es Obligatorio");
+        "password.required", "Segundo Mensaje Password");
         this.validarUsuario(ingreso, errors);
         
     }

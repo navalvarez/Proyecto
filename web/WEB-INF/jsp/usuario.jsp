@@ -16,7 +16,7 @@
             <label>*Contrasena</label><form:input path="password" value="${password}"/>
             <form:errors path="password" cssClass="error" />
             <br>
-            <form:errors path="*" class="error" />
+            
             <form:button>Enviar</form:button>     
         </form:form>
     </body>
