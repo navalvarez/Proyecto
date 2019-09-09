@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Adicionar Estudiante</title>
+        <title>Adicionar Estudiante 2</title>
     </head>
     <body>
         <h1>Datos del Estudiante</h1>
