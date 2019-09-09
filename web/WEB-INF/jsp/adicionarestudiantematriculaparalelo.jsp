@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>JSP Page</title>
+        <title>Adicionar Estudiante</title>
     </head>
     <body>
         <h1>Datos del Estudiante</h1>
