@@ -151,7 +151,7 @@ public class Evaluaciones implements Serializable {
 		this.idprog = value;
 	}
 	
-	public proyecto.Programacion getORM_Idprog() {
+	private proyecto.Programacion getORM_Idprog() {
 		return idprog;
 	}
 	

@@ -61,6 +61,7 @@ public class PrincipalControler {
             }
         }
         ModelAndView mav =new ModelAndView();
+
         mav.addObject("mismenus",smenus);       
         mav.setViewName("principal_2");
         return mav;

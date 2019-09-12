@@ -255,7 +255,7 @@ public class Usuarios implements Serializable {
 		this.ORM_datos = value;
 	}
 	
-	private java.util.Set getORM_Datos() {
+	public java.util.Set getORM_Datos() {
 		return ORM_datos;
 	}
 	

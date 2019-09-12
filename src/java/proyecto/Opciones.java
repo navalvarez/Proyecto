@@ -106,7 +106,7 @@ public class Opciones implements Serializable {
 		this.ORM_idprog = value;
 	}
 	
-	public java.util.Set getORM_Idprog() {
+	private java.util.Set getORM_Idprog() {
 		return ORM_idprog;
 	}
 	

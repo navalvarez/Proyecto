@@ -55,7 +55,7 @@
         <div id="content-footer"
         <table><tr>
                 
-                <td> sfds</td> 
+                <td>Usuario:</td> 
                 <td>${fmiusuario.getNombre()}&nbsp;${fmiusuario.getApellido1()}&nbsp;${fmiusuario.getApellido2()}</td> 
                 <td> 
             
