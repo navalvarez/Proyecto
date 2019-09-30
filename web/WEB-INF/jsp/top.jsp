@@ -9,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/footer.css" type="text/css">
         
         <title></title>
     </head>
@@ -52,11 +52,14 @@
     </script>
     <body>
         <footer id="footer">  
-        <div id="content-footer"
+        <div id="content-footer">
         <table><tr>
                 
-                <td>Usuario:</td> 
-                <td>${fmiusuario.getNombre()}&nbsp;${fmiusuario.getApellido1()}&nbsp;${fmiusuario.getApellido2()}</td> 
+                <td>
+                    <span style="color: white">Usuario:${fmiusuario.getNombre()}&nbsp;${fmiusuario.getApellido1()}&nbsp;${fmiusuario.getApellido2()}</span>
+                </td> 
+            </tr>
+            <tr>
                 <td> 
             
             <form:form method="POST" id="fmiusuario"  name="fmiusuario" commandName="fmiusuario" >

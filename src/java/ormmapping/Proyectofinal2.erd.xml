@@ -641,6 +641,17 @@
       <Comment>True, vigente. False, dado de baja</Comment>
       <UserTypes/>
     </Column>
+    <Column name="Descripcion">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
     <Comment>Contiene los menús definidos en el sistema</Comment>
   </Entity>
   <Entity name="mepro" schema="proyecto" Unlogged="false" PKConstraintName="mepro_pkey" PKClustered="0">

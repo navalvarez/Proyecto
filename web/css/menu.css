@@ -1,7 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration:none;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
 #menu ul li {
     background-color:#2e518b;
 }
-
+a{
+   text-decoration:none;
+}
 #menu ul {
     list-style:none;
     margin:0;

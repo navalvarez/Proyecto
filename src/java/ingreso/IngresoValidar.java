@@ -53,9 +53,9 @@ public class IngresoValidar implements Validator {
         System.out.println("Usuario:"+ingreso.getLogin()+"dentro");
         System.out.println("Contrasena:"+ingreso.getPassword()+"dentro");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "login",
-        "login.required", "Primer Mensaje Login");
+        "login.required", "Campo Usuario Obligatorio ");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password",
-        "password.required", "Segundo Mensaje Password");
+        "password.required", "Campo Constrasena Obligatorio");
         this.validarUsuario(ingreso, errors);
         
     }

@@ -11,7 +11,7 @@
 		<title>Principal</title>
 	</head>
 	<body>
-		<table width="140%" border="1" >
+		<table width="100%" border="0" >
 			<tr bgcolor="green">
 				<th>seccion 1</th>
 			</tr>
