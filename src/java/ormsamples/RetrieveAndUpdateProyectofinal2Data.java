@@ -64,8 +64,6 @@ public class RetrieveAndUpdateProyectofinal2Data {
 			// Update the properties of the persistent object
 			proyecto.V_usuariorolDAO.save(lproyectoV_usuariorol);
 			proyecto.Examen lproyectoExamen = proyecto.ExamenDAO.loadExamenByQuery(null, null);
-			// Update the properties of the persistent object
-			proyecto.ExamenDAO.save(lproyectoExamen);
 			t.commit();
 		}
 		catch (Exception e) {

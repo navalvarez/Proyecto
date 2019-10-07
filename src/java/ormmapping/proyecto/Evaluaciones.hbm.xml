@@ -5,7 +5,7 @@ License Type: Evaluation
 -->
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="proyecto.Evaluaciones" table="evaluaciones" schema="proyecto" lazy="false">
+	<class name="proyecto.Evaluaciones" table="evaluaciones" schema="proyecto2019" lazy="false">
 		<meta attribute="class-description">
 			Contiene los examenes asignados a cada uniersitario
 		</meta>
@@ -20,7 +20,7 @@ License Type: Evaluation
 				Nota del examen
 			</meta>
 		</property>
-		<set name="ORM_Idopcion" table="respuestas" schema="proyecto" lazy="true" cascade="save-update,lock">
+		<set name="ORM_Idopcion" table="respuestas" schema="proyecto2019" lazy="true" cascade="save-update,lock">
 			<key not-null="true">
 				<column name="idprog"/>
 				<column name="idexamen"/>

@@ -295,32 +295,6 @@ public class ExamenDAO {
 		}
 	}
 	
-	public static Examen createExamen() {
-		return new proyecto.Examen();
-	}
-	
-	public static boolean save(proyecto.Examen examen) throws PersistentException {
-		try {
-			Proyectofinal2PersistentManager.instance().saveObject(examen);
-			return true;
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static boolean delete(proyecto.Examen examen) throws PersistentException {
-		try {
-			Proyectofinal2PersistentManager.instance().deleteObject(examen);
-			return true;
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
 	public static boolean refresh(proyecto.Examen examen) throws PersistentException {
 		try {
 			Proyectofinal2PersistentManager.instance().getSession().refresh(examen);

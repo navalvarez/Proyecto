@@ -63,9 +63,6 @@ public class DeleteProyectofinal2Data {
 			proyecto.V_usuariorol lproyectoV_usuariorol = proyecto.V_usuariorolDAO.loadV_usuariorolByQuery(null, null);
 			// Delete the persistent object
 			proyecto.V_usuariorolDAO.delete(lproyectoV_usuariorol);
-			proyecto.Examen lproyectoExamen = proyecto.ExamenDAO.loadExamenByQuery(null, null);
-			// Delete the persistent object
-			proyecto.ExamenDAO.delete(lproyectoExamen);
 			t.commit();
 		}
 		catch (Exception e) {

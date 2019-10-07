@@ -44,7 +44,7 @@ public class Examen implements Serializable {
 		return getIdusu();
 	}
 	
-	public void setNombre(String value) {
+	private void setNombre(String value) {
 		this.nombre = value;
 	}
 	
@@ -52,7 +52,7 @@ public class Examen implements Serializable {
 		return nombre;
 	}
 	
-	public void setApellido1(String value) {
+	private void setApellido1(String value) {
 		this.apellido1 = value;
 	}
 	
@@ -60,7 +60,7 @@ public class Examen implements Serializable {
 		return apellido1;
 	}
 	
-	public void setApellido2(String value) {
+	private void setApellido2(String value) {
 		this.apellido2 = value;
 	}
 	
@@ -68,11 +68,11 @@ public class Examen implements Serializable {
 		return apellido2;
 	}
 	
-	public void setNota(short value) {
+	private void setNota(short value) {
 		setNota(new Short(value));
 	}
 	
-	public void setNota(Short value) {
+	private void setNota(Short value) {
 		this.nota = value;
 	}
 	

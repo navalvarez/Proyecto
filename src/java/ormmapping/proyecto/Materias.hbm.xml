@@ -5,7 +5,7 @@ License Type: Evaluation
 -->
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="proyecto.Materias" table="materias" schema="proyecto" lazy="false">
+	<class name="proyecto.Materias" table="materias" schema="proyecto2019" lazy="false">
 		<meta attribute="class-description">
 			Contiene las materias registradas en el sistema
 		</meta>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Model quotesql="1" tablecharset="" mysql_version="504" mssql_version="2005" derby_version="106" ingres_version="9">
-  <Entity name="banco" schema="proyecto" Unlogged="false" PKConstraintName="banco_pkey" PKClustered="0">
+  <Entity name="banco" schema="proyecto2019" Unlogged="false" PKConstraintName="banco_pkey" PKClustered="0">
     <Column name="idbanco">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -130,7 +130,7 @@
     </Column>
     <Comment>Banco de preguntas o enunciados para las evaluaciones</Comment>
   </Entity>
-  <Entity name="carreras" schema="proyecto" Unlogged="false" PKConstraintName="carreras_pkey" PKClustered="0">
+  <Entity name="carreras" schema="proyecto2019" Unlogged="false" PKConstraintName="carreras_pkey" PKClustered="0">
     <Column name="idcarr">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -196,7 +196,7 @@
     </Column>
     <Comment>Contiene las carreras registradas en el sistema</Comment>
   </Entity>
-  <Entity name="datos" schema="proyecto" Unlogged="false" PKConstraintName="datos_pkey" PKClustered="0">
+  <Entity name="datos" schema="proyecto2019" Unlogged="false" PKConstraintName="datos_pkey" PKClustered="0">
     <Column name="idusu">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -248,7 +248,7 @@
     </Column>
     <Comment>Login y contraseña de cada usuario registrado</Comment>
   </Entity>
-  <Entity name="dicta" schema="proyecto" Unlogged="false" PKConstraintName="dicta_pkey" PKClustered="0">
+  <Entity name="dicta" schema="proyecto2019" Unlogged="false" PKConstraintName="dicta_pkey" PKClustered="0">
     <Column name="iddicta">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -317,7 +317,7 @@
     </Column>
     <Comment>Asignación de materias a docentes</Comment>
   </Entity>
-  <Entity name="docentes" schema="proyecto" Unlogged="false" PKConstraintName="docentes_pkey" PKClustered="0">
+  <Entity name="docentes" schema="proyecto2019" Unlogged="false" PKConstraintName="docentes_pkey" PKClustered="0">
     <Column name="idusu">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -345,7 +345,7 @@
     </Column>
     <Comment>Tabla de los docentes</Comment>
   </Entity>
-  <Entity name="evaluaciones" schema="proyecto" Unlogged="false" PKConstraintName="evaluaciones_pkey" PKClustered="0">
+  <Entity name="evaluaciones" schema="proyecto2019" Unlogged="false" PKConstraintName="evaluaciones_pkey" PKClustered="0">
     <Column name="idprog">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -386,7 +386,7 @@
     </Column>
     <Comment>Contiene los examenes asignados a cada uniersitario</Comment>
   </Entity>
-  <Entity name="examenes" schema="proyecto" Unlogged="false" PKConstraintName="examenes_pkey" PKClustered="0">
+  <Entity name="examenes" schema="proyecto2019" Unlogged="false" PKConstraintName="examenes_pkey" PKClustered="0">
     <Column name="idexamen">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -501,7 +501,7 @@
     </Column>
     <Comment>Evaluaciones preparadas por un docente</Comment>
   </Entity>
-  <Entity name="materias" schema="proyecto" Unlogged="false" PKConstraintName="materias_pkey" PKClustered="0">
+  <Entity name="materias" schema="proyecto2019" Unlogged="false" PKConstraintName="materias_pkey" PKClustered="0">
     <Column name="idcarr">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -601,7 +601,7 @@
     </Column>
     <Comment>Contiene las materias registradas en el sistema</Comment>
   </Entity>
-  <Entity name="menus" schema="proyecto" Unlogged="false" PKConstraintName="menus_pkey" PKClustered="0">
+  <Entity name="menus" schema="proyecto2019" Unlogged="false" PKConstraintName="menus_pkey" PKClustered="0">
     <Column name="idmenu">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -641,20 +641,9 @@
       <Comment>True, vigente. False, dado de baja</Comment>
       <UserTypes/>
     </Column>
-    <Column name="Descripcion">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>255</Length>
-      <Nullable>true</Nullable>
-      <IDGenerator>native</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
     <Comment>Contiene los menús definidos en el sistema</Comment>
   </Entity>
-  <Entity name="mepro" schema="proyecto" Unlogged="false" PKConstraintName="mepro_pkey" PKClustered="0">
+  <Entity name="mepro" schema="proyecto2019" Unlogged="false" PKConstraintName="mepro_pkey" PKClustered="0">
     <Column name="idmenu">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -683,7 +672,7 @@
     </Column>
     <Comment>Relaciona las tablas Menus con Procesos</Comment>
   </Entity>
-  <Entity name="opciones" schema="proyecto" Unlogged="false" PKConstraintName="opciones_pkey" PKClustered="0">
+  <Entity name="opciones" schema="proyecto2019" Unlogged="false" PKConstraintName="opciones_pkey" PKClustered="0">
     <Column name="idopcion">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -738,7 +727,7 @@
     </Column>
     <Comment>Contiene las diferentes opciones de respuesta para cada pregunta del banco de preguntas</Comment>
   </Entity>
-  <Entity name="preguntas" schema="proyecto" Unlogged="false" PKConstraintName="preguntas_pkey" PKClustered="0">
+  <Entity name="preguntas" schema="proyecto2019" Unlogged="false" PKConstraintName="preguntas_pkey" PKClustered="0">
     <Column name="idexamen">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -779,7 +768,7 @@
     </Column>
     <Comment>Contiene las preguntas para un examen específico</Comment>
   </Entity>
-  <Entity name="procesos" schema="proyecto" Unlogged="false" PKConstraintName="procesos_pkey" PKClustered="0">
+  <Entity name="procesos" schema="proyecto2019" Unlogged="false" PKConstraintName="procesos_pkey" PKClustered="0">
     <Column name="idpro">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -833,7 +822,7 @@
     </Column>
     <Comment>Contiene las URLs relativas de todos los procesos u operaciones implementadas, a los que los usuarios acceden desde el navegador.</Comment>
   </Entity>
-  <Entity name="programacion" schema="proyecto" Unlogged="false" PKConstraintName="programacion_pkey" PKClustered="0">
+  <Entity name="programacion" schema="proyecto2019" Unlogged="false" PKConstraintName="programacion_pkey" PKClustered="0">
     <Column name="idprog">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -902,7 +891,7 @@
     </Column>
     <Comment>Asignación de materias a estudiantes</Comment>
   </Entity>
-  <Entity name="respuestas" schema="proyecto" Unlogged="false" PKConstraintName="respuestas_pkey" PKClustered="0">
+  <Entity name="respuestas" schema="proyecto2019" Unlogged="false" PKConstraintName="respuestas_pkey" PKClustered="0">
     <Column name="idprog">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -944,7 +933,7 @@
     </Column>
     <Comment>Contiene las respuestas de los estudiantes, de acuerdo a las diferentes opciones de respuestas</Comment>
   </Entity>
-  <Entity name="roles" schema="proyecto" Unlogged="false" PKConstraintName="roles_pkey" PKClustered="0">
+  <Entity name="roles" schema="proyecto2019" Unlogged="false" PKConstraintName="roles_pkey" PKClustered="0">
     <Column name="idrol">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -986,7 +975,7 @@
     </Column>
     <Comment>Contiene los roles definidos en el sistema</Comment>
   </Entity>
-  <Entity name="rolme" schema="proyecto" Unlogged="false" PKConstraintName="rolme_pkey" PKClustered="0">
+  <Entity name="rolme" schema="proyecto2019" Unlogged="false" PKConstraintName="rolme_pkey" PKClustered="0">
     <Column name="idrol">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -1015,7 +1004,7 @@
     </Column>
     <Comment>Relaciona las tablas Menus con Procesos</Comment>
   </Entity>
-  <Entity name="tipo" schema="proyecto" Unlogged="false" PKConstraintName="tipo_pkey" PKClustered="0">
+  <Entity name="tipo" schema="proyecto2019" Unlogged="false" PKConstraintName="tipo_pkey" PKClustered="0">
     <Column name="idtipo">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -1057,7 +1046,7 @@
     </Column>
     <Comment>Especificación del tipo de evaluación</Comment>
   </Entity>
-  <Entity name="universitarios" schema="proyecto" Unlogged="false" PKConstraintName="universitarios_pkey" PKClustered="0">
+  <Entity name="universitarios" schema="proyecto2019" Unlogged="false" PKConstraintName="universitarios_pkey" PKClustered="0">
     <Column name="idusu">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -1085,7 +1074,7 @@
     </Column>
     <Comment>Tabla de los Universitarios</Comment>
   </Entity>
-  <Entity name="usuarios" schema="proyecto" Unlogged="false" PKConstraintName="usuarios_pkey" PKClustered="0">
+  <Entity name="usuarios" schema="proyecto2019" Unlogged="false" PKConstraintName="usuarios_pkey" PKClustered="0">
     <Column name="idusu">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -1223,7 +1212,7 @@
     </Column>
     <Comment>Contiene los datos de los usuarios del sistema</Comment>
   </Entity>
-  <Entity name="usurol" schema="proyecto" Unlogged="false" PKConstraintName="usurol_pkey" PKClustered="0">
+  <Entity name="usurol" schema="proyecto2019" Unlogged="false" PKConstraintName="usurol_pkey" PKClustered="0">
     <Column name="idusu">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -1252,36 +1241,11 @@
     </Column>
     <Comment>Relaciona las tablas Usuarios con Roles</Comment>
   </Entity>
-  <View name="v_usuariorol" CreateStmt="create view v_usuariorol as  SELECT row_number() OVER () AS id,
-    u.idusu,
-    u.nombre AS unombre,
-    u.apellido1,
-    u.apellido2,
-    r.nombre,
-    d.login,
-    d.password,
-    d.activo
-   FROM (proyecto.usuarios u
-     JOIN proyecto.datos d ON ((u.idusu = d.idusu))),
-    proyecto.usurol ur,
-    proyecto.roles r
-  WHERE ((u.idusu = ur.idusu) AND (ur.idrol = r.idrol));" schema="proyecto" Materialized="false"/>
-  <View name="examen" CreateStmt="create view examen as  SELECT u.idusu,
-    u.nombre,
-    u.apellido1,
-    u.apellido2,
-    ev.nota
-   FROM proyecto.usuarios u,
-    proyecto.datos d,
-    proyecto.universitarios un,
-    proyecto.programacion p,
-    proyecto.evaluaciones ev
-  WHERE (((((u.idusu = d.idusu) AND (u.idusu = un.idusu)) AND (un.idusu = p.idusu)) AND (p.idprog = ev.idprog)) AND (ev.nota &gt;= 51));" schema="proyecto" Materialized="false"/>
   <ForeignKey name="fkbanco423148">
     <ReferenceTable>banco</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>dicta</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1295,9 +1259,9 @@
   </ForeignKey>
   <ForeignKey name="fkbanco45027">
     <ReferenceTable>banco</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>tipo</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1309,9 +1273,9 @@
   </ForeignKey>
   <ForeignKey name="fkdatos267216">
     <ReferenceTable>datos</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>usuarios</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1323,9 +1287,9 @@
   </ForeignKey>
   <ForeignKey name="fkdicta698426">
     <ReferenceTable>dicta</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>docentes</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1337,9 +1301,9 @@
   </ForeignKey>
   <ForeignKey name="fkdicta501654">
     <ReferenceTable>dicta</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>materias</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1353,9 +1317,9 @@
   </ForeignKey>
   <ForeignKey name="fkdocentes899557">
     <ReferenceTable>docentes</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>usuarios</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1367,9 +1331,9 @@
   </ForeignKey>
   <ForeignKey name="fkevaluacion987711">
     <ReferenceTable>evaluaciones</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>programacion</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1381,9 +1345,9 @@
   </ForeignKey>
   <ForeignKey name="fkevaluacion700762">
     <ReferenceTable>evaluaciones</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>examenes</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1395,9 +1359,9 @@
   </ForeignKey>
   <ForeignKey name="fkexamenes328322">
     <ReferenceTable>examenes</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>dicta</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1411,9 +1375,9 @@
   </ForeignKey>
   <ForeignKey name="fkmaterias750405">
     <ReferenceTable>materias</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>carreras</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1425,9 +1389,9 @@
   </ForeignKey>
   <ForeignKey name="fkmepro122433">
     <ReferenceTable>mepro</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>menus</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1439,9 +1403,9 @@
   </ForeignKey>
   <ForeignKey name="fkmepro242844">
     <ReferenceTable>mepro</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>procesos</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1453,9 +1417,9 @@
   </ForeignKey>
   <ForeignKey name="fkopciones128098">
     <ReferenceTable>opciones</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>banco</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1467,9 +1431,9 @@
   </ForeignKey>
   <ForeignKey name="fkpreguntas358389">
     <ReferenceTable>preguntas</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>examenes</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1481,9 +1445,9 @@
   </ForeignKey>
   <ForeignKey name="fkpreguntas133210">
     <ReferenceTable>preguntas</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>banco</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1495,9 +1459,9 @@
   </ForeignKey>
   <ForeignKey name="fkprogramaci263409">
     <ReferenceTable>programacion</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>universitarios</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1509,9 +1473,9 @@
   </ForeignKey>
   <ForeignKey name="fkprogramaci480900">
     <ReferenceTable>programacion</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>materias</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1525,9 +1489,9 @@
   </ForeignKey>
   <ForeignKey name="fkrespuestas544463">
     <ReferenceTable>respuestas</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>evaluaciones</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1541,9 +1505,9 @@
   </ForeignKey>
   <ForeignKey name="fkrespuestas633362">
     <ReferenceTable>respuestas</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>opciones</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1555,9 +1519,9 @@
   </ForeignKey>
   <ForeignKey name="fkrolme514925">
     <ReferenceTable>rolme</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>roles</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1569,9 +1533,9 @@
   </ForeignKey>
   <ForeignKey name="fkrolme33944">
     <ReferenceTable>rolme</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>menus</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1583,9 +1547,9 @@
   </ForeignKey>
   <ForeignKey name="fkuniversita443786">
     <ReferenceTable>universitarios</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>usuarios</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1597,9 +1561,9 @@
   </ForeignKey>
   <ForeignKey name="fkusurol643637">
     <ReferenceTable>usurol</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>usuarios</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>
@@ -1611,9 +1575,9 @@
   </ForeignKey>
   <ForeignKey name="fkusurol734545">
     <ReferenceTable>usurol</ReferenceTable>
-    <ReferenceSchema>proyecto</ReferenceSchema>
+    <ReferenceSchema>proyecto2019</ReferenceSchema>
     <ReferencedTable>roles</ReferencedTable>
-    <ReferencedSchema>proyecto</ReferencedSchema>
+    <ReferencedSchema>proyecto2019</ReferencedSchema>
     <OnUpdate>No action</OnUpdate>
     <OnDelete>No action</OnDelete>
     <Columns>

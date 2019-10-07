@@ -5,7 +5,7 @@ License Type: Evaluation
 -->
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="proyecto.Opciones" table="opciones" schema="proyecto" lazy="false">
+	<class name="proyecto.Opciones" table="opciones" schema="proyecto2019" lazy="false">
 		<meta attribute="class-description">
 			Contiene las diferentes opciones de respuesta para cada pregunta del banco de preguntas
 		</meta>
@@ -26,7 +26,7 @@ License Type: Evaluation
 				True, respuesta correcta. False, respueta incorrecta
 			</meta>
 		</property>
-		<set name="ORM_Idprog" table="respuestas" schema="proyecto" lazy="true" cascade="save-update,lock" inverse="true">
+		<set name="ORM_Idprog" table="respuestas" schema="proyecto2019" lazy="true" cascade="save-update,lock" inverse="true">
 			<key column="idopcion" not-null="true"/>
 			<many-to-many class="proyecto.Evaluaciones">
 				<column name="idprog"/>

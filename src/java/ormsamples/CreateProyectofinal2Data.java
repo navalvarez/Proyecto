@@ -14,7 +14,7 @@ public class CreateProyectofinal2Data {
 			session.doWork(new org.hibernate.jdbc.Work() {
 				public void execute(java.sql.Connection conn) throws java.sql.SQLException {
 					java.sql.Statement statement = conn.createStatement();
-					statement.executeUpdate("INSERT INTO proyecto.usuarios(idusu, nombre, apellido1, apellido2, sexo, f_nac, cedula, telefono, direccion, foto, activo) VALUES (1, 'Carlos', 'Perez', 'Cota', 'M', '24/09/2000', '4143805', '591673467', null, null, null)");
+					statement.executeUpdate("INSERT INTO proyecto2019.usuarios(idusu, nombre, apellido1, apellido2, sexo, f_nac, cedula, telefono, direccion, foto, activo) VALUES (1, 'Carlos', 'Perez', 'Cota', 'M', '24/09/2000', '4143805', '591673467', null, null, null)");
 					statement.close();
 				}
 			});
@@ -86,9 +86,6 @@ public class CreateProyectofinal2Data {
 			proyecto.V_usuariorol lproyectoV_usuariorol = proyecto.V_usuariorolDAO.createV_usuariorol();
 			// Initialize the properties of the persistent object here
 			proyecto.V_usuariorolDAO.save(lproyectoV_usuariorol);
-			proyecto.Examen lproyectoExamen = proyecto.ExamenDAO.createExamen();
-			// Initialize the properties of the persistent object here
-			proyecto.ExamenDAO.save(lproyectoExamen);
 			t.commit();
 		}
 		catch (Exception e) {
